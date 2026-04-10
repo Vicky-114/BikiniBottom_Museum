@@ -70,7 +70,7 @@ const LocationsSection = () => {
       rating: 5,
       visitors: "The entire Bikini Bottom population",
       hates: "Plankton",
-      icon: "🍔" 
+      image: "https://media.tenor.com/R90kXB3iBcgAAAAC/bh187-spongebob.gif" 
     },
     { 
       name: "Chum Bucket", 
@@ -80,7 +80,7 @@ const LocationsSection = () => {
       rating: 0.5,
       visitors: "Plankton, Karen, occasionally a confused tourist",
       hates: "Everyone except Plankton",
-      icon: "🪣" 
+      image: "https://media.tenor.com/Dzfb4Z5CaXEAAAAC/spongebob-mr-krabs.gif" 
     },
     { 
       name: "Boating School", 
@@ -90,7 +90,7 @@ const LocationsSection = () => {
       rating: 2,
       visitors: "SpongeBob (permanently), Mrs. Puff",
       hates: "SpongeBob (according to Mrs. Puff), Squidward",
-      icon: "🚤" 
+      image: "https://media.tenor.com/NBkJlclgORQAAAAC/spongebob-squarepants-patrick-star.gif" 
     },
     { 
       name: "Jellyfish Fields", 
@@ -100,7 +100,7 @@ const LocationsSection = () => {
       rating: 5,
       visitors: "SpongeBob, Patrick, Kevin C. Cucumber",
       hates: "People who use improper nets",
-      icon: "🫧" 
+      image: "https://media.tenor.com/I6fKCL_Ck5YAAAAC/sppongebob-squarepants-fun-song-f-is-for-friends-who-do-stuff-together-spongebob-squarepants.gif" 
     },
     { 
       name: "Goo Lagoon", 
@@ -110,7 +110,7 @@ const LocationsSection = () => {
       rating: 4.5,
       visitors: "Larry the Lobster, Surfers, Muscle Fish",
       hates: "Rainy days (underwater...)",
-      icon: "🏖️" 
+      image: "https://media.tenor.com/bX_Tt3ZBSPEAAAAC/spongebob-patrick.gif" 
     },
     { 
       name: "Sandy’s Treehouse", 
@@ -130,7 +130,7 @@ const LocationsSection = () => {
       rating: 3.5,
       visitors: "Strange bioluminescent creatures",
       hates: "Travelers who miss the bus",
-      icon: "🕳️" 
+      image: "https://media.tenor.com/B1oOvvQ8BLEAAAAC/walking-dead-shane-gillis.gif" 
     },
     { 
       name: "Bikini Bottom Mall", 
@@ -140,7 +140,7 @@ const LocationsSection = () => {
       rating: 4,
       visitors: "Pearl Krabs, Teenagers, Shoppers",
       hates: "Mr. Krabs (due to high prices)",
-      icon: "🛍️" 
+      image: "https://media.tenor.com/Nic4QCLGrgEAAAAC/spongebob-squarepants-spongebob.gif" 
     },
     { 
       name: "King Neptune’s Palace", 
@@ -152,16 +152,16 @@ const LocationsSection = () => {
       hates: "Thieves (especially crown thieves!)",
       icon: "👑" 
     },
-    { name: "Boating School Library", description: "A quiet place of learning. Rarely visited by SpongeBob.", purpose: "Library", specificLocation: "Inside Boating School", rating: 3, visitors: "Studious fish", hates: "Loud noises", icon: "📚" },
-    { name: "Bikini Bottom Hospital", description: "Handles everything from 'suds' to 'explosive hiccups'.", purpose: "Medical Center", specificLocation: "Industrial District", rating: 4, visitors: "Injured fish, Dr. Gill Gilliam", hates: "Germs", icon: "🏥" },
-    { name: "Bikini Bottom Police Station", description: "Deals with littering and world-domination attempts.", purpose: "Law Enforcement", specificLocation: "Downtown", rating: 3.5, visitors: "Police officers, criminals", hates: "Lawbreakers", icon: "👮" },
-    { name: "Bikini Bottom Prison", description: "Where those who break the laws of the sea are sent.", purpose: "High Security Prison", specificLocation: "Outskirts", rating: 1, visitors: "Plankton (frequent guest), Dirty Bubble", hates: "Inmates", icon: "⛓️" },
-    { name: "City Hall", description: "The political center where the Mayor handles civic duties.", purpose: "Civic Center", specificLocation: "City Center", rating: 3, visitors: "The Mayor, Citizens", hates: "Protests", icon: "🏛️" },
-    { name: "Goofy Goober Ice Cream Boat", description: "A nautical-themed ice cream parlor and entertainment venue.", purpose: "Party Venue", specificLocation: "Boardwalk", rating: 5, visitors: "SpongeBob, Patrick, Kids", hates: "Grumpy adults", icon: "🍦" },
-    { name: "Barg'N-Mart", description: "The local supermarket for canned kelp and bubble soap.", purpose: "Supermarket", specificLocation: "Commercial Zone", rating: 4, visitors: "Everyone needing groceries", hates: "Long lines", icon: "🛒" },
-    { name: "Fancy Restaurant", description: "An upscale dining establishment for special occasions.", purpose: "Fine Dining", specificLocation: "Uptown", rating: 4.5, visitors: "Squidward, Pearl, Mr. Krabs (when someone else pays)", hates: "Poor table manners", icon: "🍷" },
-    { name: "Salty Spitoon", description: "The toughest club in the ocean. No weenies allowed!", purpose: "Tough-Only Club", specificLocation: "The Docks", rating: 4, visitors: "Reg, Muscle Fish, Tough guys", hates: "Weenies", icon: "⚓" },
-    { name: "Weenie Hut Jr", description: "A soft and friendly alternative to the Salty Spitoon.", purpose: "Safe Space for Weenies", specificLocation: "Across from Salty Spitoon", rating: 3, visitors: "The robot waiter, SpongeBob", hates: "Aggression", icon: "🌭" },
+    { name: "Boating School Library", description: "A quiet place of learning. Rarely visited by SpongeBob.", purpose: "Library", specificLocation: "Inside Boating School", rating: 3, visitors: "Studious fish", hates: "Loud noises", image: "https://media.tenor.com/rU4yq3MjZJoAAAAC/spongebob-patrick.gif" },
+    { name: "Bikini Bottom Hospital", description: "Handles everything from 'suds' to 'explosive hiccups'.", purpose: "Medical Center", specificLocation: "Industrial District", rating: 4, visitors: "Injured fish, Dr. Gill Gilliam", hates: "Germs", image: "https://media.tenor.com/n2-FcLJN7T4AAAAC/spongebob-battle-for-bikini-bottom.gif" },
+    { name: "Bikini Bottom Police Station", description: "Deals with littering and world-domination attempts.", purpose: "Law Enforcement", specificLocation: "Downtown", rating: 3.5, visitors: "Police officers, criminals", hates: "Lawbreakers", image: "https://media.tenor.com/6xpiDZc5lhgAAAAC/ziarastar.gif" },
+    { name: "Bikini Bottom Prison", description: "Where those who break the laws of the sea are sent.", purpose: "High Security Prison", specificLocation: "Outskirts", rating: 1, visitors: "Plankton (frequent guest), Dirty Bubble", hates: "Inmates", image: "https://media.tenor.com/6xpiDZc5lhgAAAAC/ziarastar.gif" },
+    { name: "City Hall", description: "The political center where the Mayor handles civic duties.", purpose: "Civic Center", specificLocation: "City Center", rating: 3, visitors: "The Mayor, Citizens", hates: "Protests", image: "https://media.tenor.com/RICCYVztA34AAAAC/this-place-is-the-coolest-spongebob-squarepants.gif" },
+    { name: "Goofy Goober Ice Cream Boat", description: "A nautical-themed ice cream parlor and entertainment venue.", purpose: "Party Venue", specificLocation: "Boardwalk", rating: 5, visitors: "SpongeBob, Patrick, Kids", hates: "Grumpy adults", image: "https://media.tenor.com/mU-CJIC74dkAAAAC/spongebob-spongebob-squarepants.gif" },
+    { name: "Barg'N-Mart", description: "The local supermarket for canned kelp and bubble soap.", purpose: "Supermarket", specificLocation: "Commercial Zone", rating: 4, visitors: "Everyone needing groceries", hates: "Long lines", image: "https://media.tenor.com/TAViwV4LJl8AAAAC/barg-n-mart-spongebob-squarepants.gif" },
+    { name: "Fancy Restaurant", description: "An upscale dining establishment for special occasions.", purpose: "Fine Dining", specificLocation: "Uptown", rating: 4.5, visitors: "Squidward, Pearl, Mr. Krabs (when someone else pays)", hates: "Poor table manners", image: "https://media.tenor.com/WfVPBqIGut8AAAAC/fine-dining-spongebob.gif" },
+    { name: "Salty Spitoon", description: "The toughest club in the ocean. No weenies allowed!", purpose: "Tough-Only Club", specificLocation: "The Docks", rating: 4, visitors: "Reg, Muscle Fish, Tough guys", hates: "Weenies", image: "https://media.tenor.com/5nM6mEOgH7cAAAAC/the-salty-spitoon-spongebob.gif" },
+    { name: "Weenie Hut Jr", description: "A soft and friendly alternative to the Salty Spitoon.", purpose: "Safe Space for Weenies", specificLocation: "Across from Salty Spitoon", rating: 3, visitors: "The robot waiter, SpongeBob", hates: "Aggression", image: "https://media.tenor.com/MHGf2zvM0iMAAAAC/brandon-flowers-the-killers.gif" },
     { 
       name: "Kelp Shake", 
       description: "A trendy juice bar franchise that once took over the town with its addictive neon-green beverages.", 
@@ -170,7 +170,7 @@ const LocationsSection = () => {
       rating: 4.5,
       visitors: "Almost everyone in town",
       hates: "Plankton (competition), Health inspectors",
-      icon: "🥤" 
+      image: "https://media.tenor.com/USQa-39V_MYAAAAC/spongebob-squarepants-spongebob.gif" 
     },
     { 
       name: "Kelp Forest", 
@@ -180,7 +180,7 @@ const LocationsSection = () => {
       rating: 4,
       visitors: "SpongeBob, Patrick, Squidward (accidentally)",
       hates: "Lost travelers, The Flying Dutchman",
-      icon: "🌿" 
+      image: "https://media.tenor.com/zcFL7y7LyRwAAAAC/spongebob-spongebob-squarepants.gif" 
     },
     { 
       name: "Coral Forest", 
@@ -190,7 +190,7 @@ const LocationsSection = () => {
       rating: 4.5,
       visitors: "Nature enthusiasts, Tourists",
       hates: "Coral harvesters",
-      icon: "🪸" 
+      image: "https://media.tenor.com/bJrE9U1XZWgAAAAC/tiptoeing-spongebob-squarepants.gif" 
     },
     { 
       name: "The Deep Sea", 
@@ -200,7 +200,7 @@ const LocationsSection = () => {
       rating: 3,
       visitors: "Deep sea monsters, Adventurers",
       hates: "Sunlight lovers",
-      icon: "🌊" 
+      image: "https://media.tenor.com/BM9vjRQJhrYAAAAC/defend-the-deep-stop-deep-seabed-mining.gif" 
     },
     { 
       name: "The Abyss", 
@@ -210,7 +210,7 @@ const LocationsSection = () => {
       rating: 2,
       visitors: "Bioluminescent angler fish",
       hates: "Those with claustrophobia",
-      icon: "🌌" 
+      image: "https://media.tenor.com/zWE1-Lz8-9gAAAAC/playing-piano-spongebob.gif" 
     },
     { 
       name: "Sandy’s Laboratory", 
@@ -230,7 +230,7 @@ const LocationsSection = () => {
       rating: 4.5,
       visitors: "Squilliam Fancyson, The upper class",
       hates: "Squidward, Mr. Krabs (due to envy)",
-      icon: "🏰" 
+      image: "https://media.tenor.com/hUyJ8NHG-ZAAAAAC/spongebob-house-fancy.gif" 
     },
     { 
       name: "Bikini Bottom Cemetery", 
@@ -240,7 +240,7 @@ const LocationsSection = () => {
       rating: 2,
       visitors: "The Flying Dutchman, Mourners, Ghost hunters",
       hates: "Those afraid of the dark",
-      icon: "🪦" 
+      image: "https://media.tenor.com/n2-FcLJN7T4AAAAC/spongebob-battle-for-bikini-bottom.gif" 
     },
     { 
       name: "Old Man Jenkins’ House", 

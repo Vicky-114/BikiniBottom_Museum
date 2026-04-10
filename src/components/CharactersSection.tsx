@@ -20,7 +20,7 @@ const CharactersSection = () => {
         { name: "Sandy Cheeks", desc: "Close friend and regular Karate sparring partner." },
         { name: "Gary the Snail", desc: "Beloved pet and surprisingly intelligent companion." }
       ],
-      image: "https://media.tenor.com/Xk5H_FzkJf0AAAAC/playful-spanking-spongebob-squarepants.gif",
+      image: "https://media.tenor.com/EgEHOxgXjlcAAAAC/spongebob-big-guy-pants-okay-spongebob-big-guy-pants-ok.gif",
       color: "border-sponge-yellow",
     },
     {
