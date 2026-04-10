@@ -1,0 +1,65 @@
+{
+  "nav": {
+    "fact_label": "비키니 시티와 비키니 환초의 진실",
+    "fact_short": "사실",
+    "char_label": "현실의 모든 캐릭터와\n그들의 성격",
+    "char_short": "캐릭터",
+    "loc_label": "비키니 시티의 모든 장소",
+    "loc_short": "장소",
+    "food_label": "비키니 시티의 음식",
+    "food_short": "음식",
+    "game_label": "스폰지밥 관련 게임",
+    "game_short": "게임",
+    "home": "홈",
+    "menu": "메뉴"
+  },
+  "home": {
+    "title_part1": "\"깊은 바다 속 파인애플 집에서 사는\":",
+    "title_part2": "스폰지밥의 비밀 레시피",
+    "footer": "🧽 비키니 시티 박물관"
+  },
+  "bikini_bottom": {
+    "title": "비키니 시티 & 비키니 환초",
+    "bb_title": "비키니 시티",
+    "bb_desc": "비키니 시티는 스폰지밥 시리즈의 주요 배경으로, 태평양 해저에 위치해 있습니다. 이 도시는 번영하는 경제, 자체 교통 시스템, 다운타운과 켈프 숲과 같은 독특한 지역을 자랑합니다. 원작자 스티븐 힐렌버그는 해양 생물학적 배경을 바탕으로 실제 해양 생물과 만화적인 부조리를 혼합했습니다.",
+    "bb_point1": "인구는 주로 의인화된 해양 생물로 구성",
+    "bb_point2": "완전히 작동하는 인프라와 기업",
+    "bb_point3": "부조리한 물리 법칙에도 불구하고 생태학적으로 (대부분) 정확함",
+    "ba_title": "비키니 환초",
+    "ba_desc": "비키니 환초는 마셜 제도에 있는 실제 산호초입니다. 1946년부터 1958년까지 미국 군대가 실시한 23번의 핵실험인 크로스로드 작전의 장소였습니다. 이 어두운 역사적 과거는 비키니 시티의 주민들이 방사능으로 인해 돌연변이된 해양 생물이라는 거대한 팬 이론을 낳았습니다.",
+    "ba_point1": "태평양의 실제 지리적 위치",
+    "ba_point2": "크로스로드 작전 (23번의 핵폭발) 장소",
+    "ba_point3": "캐릭터 돌연변이 팬 이론의 기초",
+    "fun_fact": "💡 재미있는 사실: '비키니 환초'라는 이름은 실제로 마셜어 '피키니(코코넛 장소)'에서 유래했습니다. 또한 1946년에 전 세계에 소개된 투피스 수영복(비키니)의 이름은 폭발적인 원자 실험의 이름을 따서 명명되었습니다!",
+    "connection_title": "The Dark Truth: Sky Flowers",
+    "connection_text": "Did you know? The iconic, colorful 'sky flowers' seen floating above Bikini Bottom aren't just clouds—they are actually representing the residual nuclear fallout and oil pollution from the atomic bomb tests conducted at Bikini Atoll!",
+    "read_more": "Explore Full Analysis",
+    "hide_analysis": "Hide Analysis",
+    "thesis_statement_title": "The Core Concept",
+    "thesis_statement_text": "Why is SpongeBob SquarePants globally appealing across generations and cultures? This project explores how the show's character design, visual and narrative absurdism, and philosophical undertones (especially absurdist humor) create an emotional resonance with diverse audiences. It investigates how SpongeBob's visual language, existential satire, and cross-cultural adaptability make it both a comedic product and an example of critical social commentary.",
+    "thesis_proposal_title": "Deep Dive: Exploring the Absurd World",
+    "thesis_proposal_p1": "This thesis explores the sustained popularity and philosophical depth of SpongeBob SquarePants by analyzing its integration of absurdist humor, distinctive character design, and transcultural storytelling techniques. Originally airing in 1999, SpongeBob has remained a cultural fixture for over two decades, outlasting many contemporaries and adapting to shifting audience sensibilities. This research argues that the show's longevity is not merely a result of its surface-level comedy but stems from its sophisticated layering of existential absurdism, critiques of modern life, and innovative visual language.",
+    "thesis_proposal_p2": "At its core, SpongeBob embodies key principles of absurdist philosophy. Episodes frequently place characters in illogical, chaotic scenarios that mirror the randomness and meaninglessness often explored in the works of writers like Albert Camus and Samuel Beckett. Yet rather than despair, SpongeBob embraces these absurdities with unyielding optimism. This attitude not only differentiates him from other animated protagonists but also subtly introduces audiences—both young and old—to existential themes in an accessible, humorous format.",
+    "thesis_proposal_p3": "Visually, the show utilizes highly saturated colors, simple geometric forms, and exaggerated expressions to craft immediately recognizable characters whose psychological traits are communicated through design. SpongeBob's square shape, vibrant yellow hue, and energetic movements visually reinforce his childlike enthusiasm and resilience. In contrast, characters like Squidward are designed with droopier forms and muted tones to represent cynicism and fatigue. The conscious use of color, shape, and texture serves as an essential storytelling device, encoding emotional subtext that resonates across cultural boundaries.",
+    "thesis_proposal_p4": "Cultural adaptability is another secret to SpongeBob's global success. Through practices such as localization, dubbing, and memeification, the show transcends national borders while maintaining its thematic integrity. Adaptations often adjust slang, humor, and social references to suit local sensibilities without diluting the underlying existential absurdism. In the age of the internet, SpongeBob has further evolved into a rich source of memes, with still images and catchphrases distilling complex emotions like existential dread, absurd joy, and ironic detachment—perfectly aligning with contemporary modes of emotional expression.",
+    "thesis_proposal_p5": "Moreover, SpongeBob reflects real-world issues such as capitalism, work exhaustion, and social alienation. The recurring setting of the Krusty Krab restaurant, SpongeBob's endless enthusiasm for his minimum-wage job, and Mr. Krabs's obsessive pursuit of profit all serve as satirical nods to modern labor culture. By presenting these critiques within a whimsical underwater world, the show allows for multigenerational engagement: children enjoy the slapstick humor, while adults recognize the sharper socio-economic commentary.",
+    "thesis_proposal_p6": "Through close visual and narrative analysis, this thesis uncovers how SpongeBob SquarePants operates not just as entertainment but as a deeply layered socio-philosophical text. It argues that the series' combination of absurdist resilience, expressive visual design, and cultural fluidity has enabled it to endure as a globally relatable icon in an era defined by emotional labor, digital saturation, and collective existential questioning."
+  },
+  "characters": {
+    "title": "현실에서의 캐릭터",
+    "back": "캐릭터로 돌아가기",
+    "personality": "성격 & 생물학"
+  },
+  "locations": {
+    "title": "📍 비키니 시티의 장소",
+    "back": "장소로 돌아가기"
+  },
+  "food": {
+    "title": "🍔 비키니 시티의 음식",
+    "back": "음식으로 돌아가기"
+  },
+  "game": {
+    "title": "스폰지밥 게임",
+    "desc": "비키니 시티 거주 테스트에서 실력을 테스트해보세요!"
+  }
+}

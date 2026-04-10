@@ -1,0 +1,65 @@
+{
+  "nav": {
+    "fact_label": "Datos sobre Fondo de Bikini y el Atolón",
+    "fact_short": "Datos",
+    "char_label": "Todos los personajes en la vida real y su personalidad",
+    "char_short": "Personajes",
+    "loc_label": "Todas las ubicaciones en Fondo de Bikini",
+    "loc_short": "Ubicaciones",
+    "food_label": "Comida en Fondo de Bikini",
+    "food_short": "Comida",
+    "game_label": "Juegos relacionados con Bob Esponja",
+    "game_short": "Juegos",
+    "home": "Inicio",
+    "menu": "Menú"
+  },
+  "home": {
+    "title_part1": "\"Vive en una piña debajo del mar\":",
+    "title_part2": "La Fórmula Secreta de Bob Esponja",
+    "footer": "🧽 Museo de Fondo de Bikini"
+  },
+  "bikini_bottom": {
+    "title": "Fondo de Bikini y Atolón Bikini",
+    "bb_title": "Fondo de Bikini",
+    "bb_desc": "Fondo de Bikini es el escenario principal de la serie Bob Esponja, ubicado en el fondo del Océano Pacífico. Cuenta con una economía próspera, sistema de tránsito propio y distritos distintos. El creador, Stephen Hillenburg, usó su formación en biología marina para mezclar vida acuática real con lo absurdo animado.",
+    "bb_point1": "Población consiste principalmente en vida marina antropomórfica",
+    "bb_point2": "Cuenta con infraestructura y negocios en pleno funcionamiento",
+    "bb_point3": "Ecológicamente preciso (mayormente) a pesar de la física absurda",
+    "ba_title": "Atolón Bikini",
+    "ba_desc": "El Atolón Bikini es un arrecife de coral del mundo real en las Islas Marshall. Entre 1946 y 1958, fue el sitio de la Operación Crossroads, una serie de 23 pruebas nucleares realizadas por militares de EE. UU. Este oscuro pasado histórico generó una teoría: los residentes de Fondo de Bikini son criaturas mutadas por la radiación.",
+    "ba_point1": "Ubicación geográfica real en el Pacífico",
+    "ba_point2": "Sitio de la Operación Crossroads (23 detonaciones nucleares)",
+    "ba_point3": "La base de las teorías sobre mutantes",
+    "fun_fact": "💡 Dato curioso: El nombre \"Atolón Bikini\" en realidad proviene del nombre marshalés \"Pikinni\" (lugar de cocos). ¡También inspiró el nombre del traje de baño de dos piezas introducido en 1946, nombrado en honor a las explosivas pruebas atómicas!",
+    "connection_title": "The Dark Truth: Sky Flowers",
+    "connection_text": "Did you know? The iconic, colorful 'sky flowers' seen floating above Bikini Bottom aren't just clouds—they are actually representing the residual nuclear fallout and oil pollution from the atomic bomb tests conducted at Bikini Atoll!",
+    "read_more": "Explore Full Analysis",
+    "hide_analysis": "Hide Analysis",
+    "thesis_statement_title": "The Core Concept",
+    "thesis_statement_text": "Why is SpongeBob SquarePants globally appealing across generations and cultures? This project explores how the show's character design, visual and narrative absurdism, and philosophical undertones (especially absurdist humor) create an emotional resonance with diverse audiences. It investigates how SpongeBob's visual language, existential satire, and cross-cultural adaptability make it both a comedic product and an example of critical social commentary.",
+    "thesis_proposal_title": "Deep Dive: Exploring the Absurd World",
+    "thesis_proposal_p1": "This thesis explores the sustained popularity and philosophical depth of SpongeBob SquarePants by analyzing its integration of absurdist humor, distinctive character design, and transcultural storytelling techniques. Originally airing in 1999, SpongeBob has remained a cultural fixture for over two decades, outlasting many contemporaries and adapting to shifting audience sensibilities. This research argues that the show's longevity is not merely a result of its surface-level comedy but stems from its sophisticated layering of existential absurdism, critiques of modern life, and innovative visual language.",
+    "thesis_proposal_p2": "At its core, SpongeBob embodies key principles of absurdist philosophy. Episodes frequently place characters in illogical, chaotic scenarios that mirror the randomness and meaninglessness often explored in the works of writers like Albert Camus and Samuel Beckett. Yet rather than despair, SpongeBob embraces these absurdities with unyielding optimism. This attitude not only differentiates him from other animated protagonists but also subtly introduces audiences—both young and old—to existential themes in an accessible, humorous format.",
+    "thesis_proposal_p3": "Visually, the show utilizes highly saturated colors, simple geometric forms, and exaggerated expressions to craft immediately recognizable characters whose psychological traits are communicated through design. SpongeBob's square shape, vibrant yellow hue, and energetic movements visually reinforce his childlike enthusiasm and resilience. In contrast, characters like Squidward are designed with droopier forms and muted tones to represent cynicism and fatigue. The conscious use of color, shape, and texture serves as an essential storytelling device, encoding emotional subtext that resonates across cultural boundaries.",
+    "thesis_proposal_p4": "Cultural adaptability is another secret to SpongeBob's global success. Through practices such as localization, dubbing, and memeification, the show transcends national borders while maintaining its thematic integrity. Adaptations often adjust slang, humor, and social references to suit local sensibilities without diluting the underlying existential absurdism. In the age of the internet, SpongeBob has further evolved into a rich source of memes, with still images and catchphrases distilling complex emotions like existential dread, absurd joy, and ironic detachment—perfectly aligning with contemporary modes of emotional expression.",
+    "thesis_proposal_p5": "Moreover, SpongeBob reflects real-world issues such as capitalism, work exhaustion, and social alienation. The recurring setting of the Krusty Krab restaurant, SpongeBob's endless enthusiasm for his minimum-wage job, and Mr. Krabs's obsessive pursuit of profit all serve as satirical nods to modern labor culture. By presenting these critiques within a whimsical underwater world, the show allows for multigenerational engagement: children enjoy the slapstick humor, while adults recognize the sharper socio-economic commentary.",
+    "thesis_proposal_p6": "Through close visual and narrative analysis, this thesis uncovers how SpongeBob SquarePants operates not just as entertainment but as a deeply layered socio-philosophical text. It argues that the series' combination of absurdist resilience, expressive visual design, and cultural fluidity has enabled it to endure as a globally relatable icon in an era defined by emotional labor, digital saturation, and collective existential questioning."
+  },
+  "characters": {
+    "title": "Personajes en la Vida Real",
+    "back": "Volver a Personajes",
+    "personality": "Personalidad y Biología"
+  },
+  "locations": {
+    "title": "📍 Ubicaciones en Fondo de Bikini",
+    "back": "Volver a Ubicaciones"
+  },
+  "food": {
+    "title": "🍔 Comida de Fondo de Bikini",
+    "back": "Volver a Comida"
+  },
+  "game": {
+    "title": "Juegos de Bob Esponja",
+    "desc": "¡Pon a prueba tus habilidades en el Test de Residencia de Fondo de Bikini!"
+  }
+}

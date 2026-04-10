@@ -1,0 +1,65 @@
+{
+  "nav": {
+    "fact_label": "Fakten über Bikini Bottom & Bikini Atoll",
+    "fact_short": "Fakten",
+    "char_label": "Alle Charaktere im wahren Leben\nund ihre Persönlichkeit",
+    "char_short": "Charaktere",
+    "loc_label": "Alle Orte in Bikini Bottom",
+    "loc_short": "Orte",
+    "food_label": "Essen in Bikini Bottom",
+    "food_short": "Essen",
+    "game_label": "Spiele im Zusammenhang mit SpongeBob",
+    "game_short": "Spiele",
+    "home": "Startseite",
+    "menu": "Menü"
+  },
+  "home": {
+    "title_part1": "„Wer wohnt in der Ananas ganz tief im Meer“:",
+    "title_part2": "Die Geheimformel von SpongeBob",
+    "footer": "🧽 Bikini Bottom Museum"
+  },
+  "bikini_bottom": {
+    "title": "Bikini Bottom & Bikini-Atoll",
+    "bb_title": "Bikini Bottom",
+    "bb_desc": "Bikini Bottom ist der Hauptschauplatz der SpongeBob Schwammkopf Serie, tief unten im Pazifik. Es hat eine florierende Wirtschaft, eigene Verkehrsmittel und eigene Bezirke. Der Schöpfer, Stephen Hillenburg, nutzte seinen Hintergrund in der Meeresbiologie, um echtes Meeresleben mit Zeichentrick-Absurdität zu verbinden.",
+    "bb_point1": "Bevölkerung besteht aus anthropomorphen Meeresbewohnern",
+    "bb_point2": "Verfügt über funktionierende Infrastruktur und Geschäfte",
+    "bb_point3": "Ökologisch (meist) genau trotz absurder Physik",
+    "ba_title": "Bikini-Atoll",
+    "ba_desc": "Das Bikini-Atoll ist ein echtes Korallenriff auf den Marshallinseln. Zwischen 1946 und 1958 war es der Ort der Operation Crossroads – einer Reihe von 23 Atomwaffentests durch das US-Militär. Diese dunkle Vergangenheit brachte eine Fantheorie hervor: Die Bewohner von Bikini Bottom sind mutierte Meerestiere.",
+    "ba_point1": "Echter geografischer Ort im Pazifik",
+    "ba_point2": "Ort der Operation Crossroads (23 Detonationen)",
+    "ba_point3": "Grundlage für Mutantenphantheorien",
+    "fun_fact": "💡 Wusstest du schon?: Der Name „Bikini-Atoll“ stammt vom marshallesischen Namen „Pikinni“ („Kokosnussort“). Er inspirierte auch den Namen des zweiteiligen Badeanzugs von 1946!",
+    "connection_title": "The Dark Truth: Sky Flowers",
+    "connection_text": "Did you know? The iconic, colorful 'sky flowers' seen floating above Bikini Bottom aren't just clouds—they are actually representing the residual nuclear fallout and oil pollution from the atomic bomb tests conducted at Bikini Atoll!",
+    "read_more": "Explore Full Analysis",
+    "hide_analysis": "Hide Analysis",
+    "thesis_statement_title": "The Core Concept",
+    "thesis_statement_text": "Why is SpongeBob SquarePants globally appealing across generations and cultures? This project explores how the show's character design, visual and narrative absurdism, and philosophical undertones (especially absurdist humor) create an emotional resonance with diverse audiences. It investigates how SpongeBob's visual language, existential satire, and cross-cultural adaptability make it both a comedic product and an example of critical social commentary.",
+    "thesis_proposal_title": "Deep Dive: Exploring the Absurd World",
+    "thesis_proposal_p1": "This thesis explores the sustained popularity and philosophical depth of SpongeBob SquarePants by analyzing its integration of absurdist humor, distinctive character design, and transcultural storytelling techniques. Originally airing in 1999, SpongeBob has remained a cultural fixture for over two decades, outlasting many contemporaries and adapting to shifting audience sensibilities. This research argues that the show's longevity is not merely a result of its surface-level comedy but stems from its sophisticated layering of existential absurdism, critiques of modern life, and innovative visual language.",
+    "thesis_proposal_p2": "At its core, SpongeBob embodies key principles of absurdist philosophy. Episodes frequently place characters in illogical, chaotic scenarios that mirror the randomness and meaninglessness often explored in the works of writers like Albert Camus and Samuel Beckett. Yet rather than despair, SpongeBob embraces these absurdities with unyielding optimism. This attitude not only differentiates him from other animated protagonists but also subtly introduces audiences—both young and old—to existential themes in an accessible, humorous format.",
+    "thesis_proposal_p3": "Visually, the show utilizes highly saturated colors, simple geometric forms, and exaggerated expressions to craft immediately recognizable characters whose psychological traits are communicated through design. SpongeBob's square shape, vibrant yellow hue, and energetic movements visually reinforce his childlike enthusiasm and resilience. In contrast, characters like Squidward are designed with droopier forms and muted tones to represent cynicism and fatigue. The conscious use of color, shape, and texture serves as an essential storytelling device, encoding emotional subtext that resonates across cultural boundaries.",
+    "thesis_proposal_p4": "Cultural adaptability is another secret to SpongeBob's global success. Through practices such as localization, dubbing, and memeification, the show transcends national borders while maintaining its thematic integrity. Adaptations often adjust slang, humor, and social references to suit local sensibilities without diluting the underlying existential absurdism. In the age of the internet, SpongeBob has further evolved into a rich source of memes, with still images and catchphrases distilling complex emotions like existential dread, absurd joy, and ironic detachment—perfectly aligning with contemporary modes of emotional expression.",
+    "thesis_proposal_p5": "Moreover, SpongeBob reflects real-world issues such as capitalism, work exhaustion, and social alienation. The recurring setting of the Krusty Krab restaurant, SpongeBob's endless enthusiasm for his minimum-wage job, and Mr. Krabs's obsessive pursuit of profit all serve as satirical nods to modern labor culture. By presenting these critiques within a whimsical underwater world, the show allows for multigenerational engagement: children enjoy the slapstick humor, while adults recognize the sharper socio-economic commentary.",
+    "thesis_proposal_p6": "Through close visual and narrative analysis, this thesis uncovers how SpongeBob SquarePants operates not just as entertainment but as a deeply layered socio-philosophical text. It argues that the series' combination of absurdist resilience, expressive visual design, and cultural fluidity has enabled it to endure as a globally relatable icon in an era defined by emotional labor, digital saturation, and collective existential questioning."
+  },
+  "characters": {
+    "title": "Charaktere im wahren Leben",
+    "back": "Zurück zu Charakteren",
+    "personality": "Persönlichkeit & Biologie"
+  },
+  "locations": {
+    "title": "📍 Orte in Bikini Bottom",
+    "back": "Zurück zu Orten"
+  },
+  "food": {
+    "title": "🍔 Essen in Bikini Bottom",
+    "back": "Zurück zum Essen"
+  },
+  "game": {
+    "title": "SpongeBob Spiele",
+    "desc": "Teste dein Können im Bikini-Bottom-Residenz-Test!"
+  }
+}
