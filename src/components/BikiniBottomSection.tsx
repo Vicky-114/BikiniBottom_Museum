@@ -36,9 +36,9 @@ const BikiniBottomSection = () => {
     const setRandomBg = () => {
       const randomNum = Math.floor(Math.random() * 8) + 1;
       setBgImage((prev) => {
-        const nextBg = `/images/bikini-bottom-bg/bg${randomNum}.jpg`;
+        const nextBg = `${import.meta.env.BASE_URL}images/bikini-bottom-bg/bg${randomNum}.jpg`;
         // Prevent selecting the same background twice in a row if possible
-        return prev === nextBg ? `/images/bikini-bottom-bg/bg${(randomNum % 8) + 1}.jpg` : nextBg;
+        return prev === nextBg ? `${import.meta.env.BASE_URL}images/bikini-bottom-bg/bg${(randomNum % 8) + 1}.jpg` : nextBg;
       });
     };
 
