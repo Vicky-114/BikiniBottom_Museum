@@ -80,7 +80,7 @@ const Index = () => {
           style={{
             left: mousePos.x,
             top: mousePos.y,
-            transform: 'translate(-35%, -15%)', // Align the middle of the net opening to the mouse hotspot
+            transform: 'translate(-25%, -35%)', // Adjusted to align the true browser click precisely with the net opening
           }}
         >
           <img 
