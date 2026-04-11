@@ -18,9 +18,11 @@ const CharactersSection = () => {
         { name: "Squidward Tentacles", desc: "Next-door neighbor and Krusty Krab coworker. SpongeBob views him as a great friend, completely oblivious to Squidward's intense disdain." },
         { name: "Mr. Krabs", desc: "Boss and ultimate idol. SpongeBob is fiercely loyal to him and the Krusty Krab." },
         { name: "Sandy Cheeks", desc: "Close friend and regular Karate sparring partner." },
-        { name: "Gary the Snail", desc: "Beloved pet and surprisingly intelligent companion." }
+        { name: "Gary the Snail", desc: "Beloved pet and surprisingly intelligent companion." },
+        { name: "Mermaid Man", desc: "SpongeBob's ultimate superhero idol." },
+        { name: "Squidward's Father", desc: "SpongeBob surprisingly gets along beautifully with Squidward's dad and they love to play games together." }
       ],
-      image: "https://media.tenor.com/EgEHOxgXjlcAAAAC/spongebob-big-guy-pants-okay-spongebob-big-guy-pants-ok.gif",
+      image: "https://media.tenor.com/jM39-0F86WcAAAAi/spongebob-spongebob-squarepants.gif",
       color: "border-sponge-yellow",
     },
     {
@@ -29,7 +31,8 @@ const CharactersSection = () => {
       personality: "Dim-witted, lazy, yet fiercely loyal best friend. Patrick spends his days sleeping under a rock. Hillenburg used the real scientific fact that starfish do not possess a central brain as the direct inspiration for Patrick's lack of intelligence.",
       relationships: [
         { name: "SpongeBob SquarePants", desc: "Inseparable best friend and partner in crime." },
-        { name: "Squidward Tentacles", desc: "Neighbor who Patrick equally annoys, often unintentionally ruining his plans." }
+        { name: "Squidward Tentacles", desc: "Neighbor who Patrick equally annoys, often unintentionally ruining his plans." },
+        { name: "Squidward's Father", desc: "Patrick has a mysteriously great relationship with Squidward's father and they have fun playing together." }
       ],
       image: "https://media.tenor.com/B0piVWUiKaUAAAAC/patrick-drooling-patrick-star.gif",
       color: "border-shell-pink",
@@ -43,7 +46,7 @@ const CharactersSection = () => {
         { name: "Squilliam Fancyson", desc: "Wealthy arch-rival from high school band class whom he constantly tries to impress." },
         { name: "Mr. Krabs", desc: "His cheap boss who pays him terribly at a job he despises." }
       ],
-      image: "https://media.tenor.com/wua9xKMf_pIAAAAC/spongebob-spongebob-squarepants.gif",
+      image: "https://media.tenor.com/iJotvW9Mdf4AAAAC/squidward.gif",
       color: "border-ocean-light",
     },
     {
@@ -66,7 +69,7 @@ const CharactersSection = () => {
         { name: "SpongeBob SquarePants", desc: "First real friend in Bikini Bottom, loyal testing subject for her inventions, and Karate buddy." },
         { name: "Patrick Star", desc: "Friend, though often irritated by his extreme stupidity when trying to conduct experiments." }
       ],
-      image: "https://media.tenor.com/2Oz3zeymY40AAAAC/spongebob-squarepants-s15.gif",
+      image: "https://media.tenor.com/UNjQtcL5UFgAAAAC/sandy-cheeks-dancing.gif",
       color: "border-sandy-brown",
     },
     {
@@ -77,7 +80,7 @@ const CharactersSection = () => {
         { name: "Mr. Krabs", desc: "His arch-nemesis who completely monopolizes the fast-food industry." },
         { name: "Karen Plankton", desc: "His sophisticated computer wife who points out the flaws in all his evil schemes." }
       ],
-      image: "https://media.tenor.com/V97Rv1JHTkMAAAAC/plankton-spongebob.gif",
+      image: "https://media.tenor.com/ESEoirTqp6oAAAAC/plankton-sip.gif",
       color: "border-emerald-600",
     },
     {
@@ -87,14 +90,14 @@ const CharactersSection = () => {
       relationships: [
         { name: "SpongeBob SquarePants", desc: "His loving owner who often misinterprets his complex thoughts as simple meows." }
       ],
-      image: "https://media.tenor.com/yz-D12z20iQAAAAC/spongebob-spongebob-squarepants.gif",
+      image: "https://media.tenor.com/BMUtJ8tV5Y8AAAAC/gary-gary-the-snail.gif",
       color: "border-pink-300",
     },
     {
       name: "Pearl Krabs",
       realAnimal: "Sperm Whale",
       personality: "Mr. Krabs's teenage daughter who loves shopping and pop music. Biologically, she's a massive marine mammal, which humorously contrasts with her tiny crab father.",
-      image: "https://media.tenor.com/zCegSRW8x14AAAAC/mr-krabs-not-impressed.gif",
+      image: "https://media.tenor.com/yFv6lR08yVMAAAAi/pearl-krabs.gif",
       color: "border-pink-400",
     },
     {
@@ -105,7 +108,7 @@ const CharactersSection = () => {
         { name: "SpongeBob SquarePants", desc: "Her eternal student who causes her severe psychological trauma and physical injuries." },
         { name: "Mr. Krabs", desc: "Occasionally dates him, though his cheapness often ruins the mood." }
       ],
-      image: "https://media.tenor.com/5lDJDW2P2ToAAAAC/get-away-from-me-get-away.gif",
+      image: "https://media.tenor.com/uRXXy1ZJqI0AAAAi/mrs-puff.gif",
       color: "border-yellow-300",
     },
     {
@@ -117,7 +120,7 @@ const CharactersSection = () => {
         { name: "Sandy Cheeks", desc: "Fellow fitness enthusiast and lifting partner." },
         { name: "Don the Whale", desc: "Fellow muscular beach regular and lifting competitor." }
       ],
-      image: "https://media.tenor.com/UD7aZzryfxQAAAAC/pathetic-larry-the-lobster.gif",
+      image: "https://media.tenor.com/xHqNInZkSgcAAAAi/larry.gif",
       color: "border-red-500",
     },
     {
@@ -128,7 +131,7 @@ const CharactersSection = () => {
         { name: "Plankton", desc: "Her husband and creator. She constantly deals with his inadequacies and failures." },
         { name: "Sandy Cheeks", desc: "Mutual respect as fellow women of science." }
       ],
-      image: "https://media.tenor.com/YH-cn-N9DGwAAAAC/spongebob-spongebob-squ.gif",
+      image: "https://media.tenor.com/0M20k8eP8S4AAAAi/karen-plankton.gif",
       color: "border-green-400",
     },
     {
@@ -173,7 +176,7 @@ const CharactersSection = () => {
         { name: "Princess Mindy", desc: "His daughter who frequently questions his harsh dictatorial judgements." },
         { name: "SpongeBob SquarePants", desc: "Reclaimed his stolen crown from Shell City." }
       ],
-      image: "https://media.tenor.com/dwNsSa1RQTwAAAAC/spongebob-squarepants-king-neptune.gif",
+      image: "https://media.tenor.com/IksBlybQnqkAAAAi/king-neptune.gif",
       color: "border-cyan-400",
     },
     {
