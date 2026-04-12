@@ -150,7 +150,7 @@ const Index = () => {
                   >
                     <button
                       onClick={() => setActiveSection(item.id)}
-                      className="group relative transition-all duration-300 hover:scale-[1.15] hover:rotate-2 active:scale-95 cursor-none focus:outline-none w-32 md:w-40 lg:w-48 h-auto drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)] hover:drop-shadow-[0_15px_15px_rgba(0,0,0,0.7)]"
+                      className="group relative transition-all duration-300 hover:scale-[1.15] hover:rotate-2 active:scale-95 cursor-none focus:outline-none w-[180px] sm:w-[260px] md:w-[350px] lg:w-[480px] h-auto drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)] hover:drop-shadow-[0_15px_15px_rgba(0,0,0,0.7)]"
                     >
                       <img 
                         src={item.image} 
@@ -159,7 +159,7 @@ const Index = () => {
                       />
                     </button>
                     {/* Tooltip visible on hover (Desktop only for better UX) */}
-                    <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-[105%] mt-3 px-4 py-2 bg-black/75 text-white/75 text-sm font-display rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pointer-events-none whitespace-pre-line text-center w-max max-w-[280px] z-50">
+                    <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-[100%] mt-[5px] px-4 py-2 bg-black/75 text-white/75 text-sm font-display rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pointer-events-none whitespace-pre-line text-center w-max max-w-[280px] z-50">
                       {item.label}
                       <div className="absolute -top-2 left-1/2 -translate-x-1/2 border-[6px] border-transparent border-b-black/75"></div>
                     </div>
