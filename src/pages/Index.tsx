@@ -12,17 +12,23 @@ import GameSection from "@/components/GameSection";
 import CatchKingJ from "@/components/CatchKingJ";
 import netIcon from "@/assets/net1.png";
 
+import navFactImg from "@/assets/nav_fact.png";
+import navCharacterImg from "@/assets/nav_character.png";
+import navLocationImg from "@/assets/nav_location.png";
+import navFoodImg from "@/assets/nav_food.png";
+import navGameImg from "@/assets/nav_game.png";
+
 const Index = () => {
   const { t } = useTranslation();
   const [activeSection, setActiveSection] = useState("intro");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { id: "bikini-bottom", label: t('nav.fact_label'), shortLabel: t('nav.fact_short') },
-    { id: "characters", label: t('nav.char_label'), shortLabel: t('nav.char_short') },
-    { id: "locations", label: t('nav.loc_label'), shortLabel: t('nav.loc_short') },
-    { id: "food", label: t('nav.food_label'), shortLabel: t('nav.food_short') },
-    { id: "game", label: t('nav.game_label'), shortLabel: t('nav.game_short') },
+    { id: "bikini-bottom", label: t('nav.fact_label'), shortLabel: t('nav.fact_short'), image: navFactImg },
+    { id: "characters", label: t('nav.char_label'), shortLabel: t('nav.char_short'), image: navCharacterImg },
+    { id: "locations", label: t('nav.loc_label'), shortLabel: t('nav.loc_short'), image: navLocationImg },
+    { id: "food", label: t('nav.food_label'), shortLabel: t('nav.food_short'), image: navFoodImg },
+    { id: "game", label: t('nav.game_label'), shortLabel: t('nav.game_short'), image: navGameImg },
   ];
 
   const floatingPos = useMemo(() => {
@@ -144,15 +150,16 @@ const Index = () => {
                   >
                     <button
                       onClick={() => setActiveSection(item.id)}
-                      className={`w-36 md:w-48 px-4 py-3 rounded-2xl border-2 border-primary font-display text-sm md:text-[15px] transition-all hover:scale-125 active:scale-90 shadow-xl text-center cursor-grab active:cursor-grabbing hover:pause-animation ${activeSection === item.id
-                        ? "bg-white/90 text-foreground font-bold border-secondary shadow-[0_0_20px_rgba(255,255,255,0.6)]"
-                        : "bg-white/80 text-foreground/85 hover:bg-white/95"
-                        }`}
+                      className="group relative transition-all duration-300 hover:scale-[1.15] hover:rotate-2 active:scale-95 cursor-none focus:outline-none w-32 md:w-40 lg:w-48 h-auto drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)] hover:drop-shadow-[0_15px_15px_rgba(0,0,0,0.7)]"
                     >
-                      {item.shortLabel}
+                      <img 
+                        src={item.image} 
+                        alt={item.shortLabel} 
+                        className="w-full h-auto object-contain pointer-events-none select-none transition-transform" 
+                      />
                     </button>
                     {/* Tooltip visible on hover (Desktop only for better UX) */}
-                    <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-full mt-3 px-4 py-2 bg-black/75 text-white/75 text-sm font-display rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pointer-events-none whitespace-pre-line text-center w-max max-w-[280px] z-50">
+                    <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-[105%] mt-3 px-4 py-2 bg-black/75 text-white/75 text-sm font-display rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pointer-events-none whitespace-pre-line text-center w-max max-w-[280px] z-50">
                       {item.label}
                       <div className="absolute -top-2 left-1/2 -translate-x-1/2 border-[6px] border-transparent border-b-black/75"></div>
                     </div>
