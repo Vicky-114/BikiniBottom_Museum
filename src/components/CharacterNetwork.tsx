@@ -158,14 +158,6 @@ const CharacterNetwork: React.FC<CharacterNetworkProps> = ({ characters, onSelec
     const connected = rawNodes.filter(n => connectedIds.has(n.id)).map(n => ({ ...n })) as CharacterNode[];
     const isolated = rawNodes.filter(n => !connectedIds.has(n.id)).map(n => ({ ...n })) as CharacterNode[];
 
-    // Lock SpongeBob exactly to the center
-    connected.forEach(n => {
-      if (n.id === "SpongeBob SquarePants") {
-        n.fx = dimensions.width / 2;
-        n.fy = dimensions.height / 2;
-      }
-    });
-
     // Scaling the network logic with more spacious distances
     const simLinks = rawLinks.map(l => ({ ...l }));
     const linkSim = d3.forceLink<CharacterNode, CharacterLink>(simLinks).id(d => d.id).distance(180);
@@ -179,7 +171,12 @@ const CharacterNetwork: React.FC<CharacterNetworkProps> = ({ characters, onSelec
     // Enforce container bounds directly during Physics calculation!
     simulation.on('tick', () => {
       connected.forEach(node => {
-        if (node.x === undefined || node.y === undefined) return;
+        if (node.x === undefined || node.y === undefined || isNaN(node.x) || isNaN(node.y)) {
+           // Graceful fallback during critical physics failure
+           node.x = dimensions.width / 2;
+           node.y = dimensions.height / 2;
+           return;
+        }
         const radiusConfig = 65; // larger pad for 2x network
         node.x = Math.max(radiusConfig, Math.min(dimensions.width - radiusConfig, node.x));
         node.y = Math.max(radiusConfig, Math.min(dimensions.height - radiusConfig, node.y));
@@ -188,6 +185,7 @@ const CharacterNetwork: React.FC<CharacterNetworkProps> = ({ characters, onSelec
 
     // Fast-forward simulation to make it completely static instantly
     simulation.tick(300);
+    // Remove the center lock post-tick if needed, but since it's static we ensure it's balanced
     simulation.stop();
 
     setConnectedNodes(connected);
@@ -205,9 +203,10 @@ const CharacterNetwork: React.FC<CharacterNetworkProps> = ({ characters, onSelec
         {/* SVG layer for Links and Labels */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none">
         {links.map((link, i) => {
-          const source = link.source as CharacterNode;
-          const target = link.target as CharacterNode;
-          if (!source.x || !source.y || !target.x || !target.y) return null;
+          const source = (typeof link.source === 'string' ? connectedNodes.find(n => n.id === link.source) : link.source) as CharacterNode;
+          const target = (typeof link.target === 'string' ? connectedNodes.find(n => n.id === link.target) : link.target) as CharacterNode;
+          
+          if (!source || !target || !source.x || !source.y || !target.x || !target.y) return null;
           
           const midX = (source.x + target.x) / 2;
           const midY = (source.y + target.y) / 2;
