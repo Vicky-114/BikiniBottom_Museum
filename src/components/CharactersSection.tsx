@@ -1013,7 +1013,7 @@ const CharactersSection = () => {
                     onMouseLeave={() => setHoveredChar(null)}
                     className={`relative flex flex-col items-center group focus:outline-none transition-all duration-500 ${
                       hoveredChar === char.name ? 'z-50 drop-shadow-[0_0_25px_rgba(255,255,255,1)]' : 
-                      isDimmed ? 'opacity-10 scale-95 blur-md pointer-events-none' : 
+                      isDimmed ? 'opacity-30 scale-95 pointer-events-none grayscale' : 
                       'hover:scale-110 active:scale-95'
                     }`}
                   >

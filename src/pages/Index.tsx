@@ -202,9 +202,11 @@ const Index = () => {
                                 setActiveSection(item.id);
                                 setIsMenuOpen(false);
                               }}
-                              className={`w-full px-5 py-3 whitespace-nowrap font-display flex items-center gap-4 text-sm md:text-base transition-colors border-b last:border-b-0 border-primary/20 hover:bg-primary/10 text-[#002f5a] ${activeSection === item.id ? "bg-primary/20 font-bold" : ""}`}
+                              className={`w-full px-5 py-3 whitespace-nowrap font-display flex items-center justify-start gap-4 text-sm md:text-base transition-colors border-b last:border-b-0 border-primary/20 hover:bg-primary/10 text-[#002f5a] ${activeSection === item.id ? "bg-primary/20 font-bold" : ""}`}
                             >
-                              <img src={item.image} alt={item.id} className="w-[25px] h-[25px] object-contain" />
+                              <div className="w-[30px] flex justify-center">
+                                <img src={item.image} alt={item.id} className="w-full h-[30px] object-contain shrink-0" />
+                              </div>
                               {item.shortLabel}
                             </button>
                             {/* Tooltip visible on hover */}
