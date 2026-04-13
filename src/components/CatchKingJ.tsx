@@ -270,20 +270,19 @@ export default function CatchKingJ({ onCatch }: { onCatch: () => void }) {
 
       {/* Failure Overlay Screen */}
       {showFailureScreen && (
-        <div className="fixed inset-0 z-[300] bg-black flex items-center justify-center cursor-default animate-in fade-in duration-500">
-          <img src={failureBg} className="absolute inset-0 w-full h-full object-cover opacity-80" alt="Failure" />
-          <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
+        <div className="fixed inset-0 z-[300] bg-black flex flex-col items-center justify-between cursor-default animate-in fade-in duration-500 py-10 md:py-16">
+          <img src={failureBg} className="absolute inset-0 w-full h-full object-cover" alt="Failure" />
           
-          <div className="relative z-10 flex flex-col items-center">
-             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display text-white drop-shadow-[0_4px_10px_rgba(0,0,0,1)] border-4 border-black bg-primary/95 px-10 py-6 rounded-3xl -rotate-2 transform hover:rotate-1 animate-breathe">
+          <div className="relative z-10 w-full flex justify-center px-4">
+             <h1 className="text-4xl md:text-5xl lg:text-7xl font-display text-white text-center drop-shadow-[0_5px_5px_rgba(0,0,0,1)] [-webkit-text-stroke:2px_black] md:[-webkit-text-stroke:3px_black]">
                Catch Jelly King to enter the Museum
              </h1>
           </div>
           
-          <div className="absolute left-[3%] bottom-[30%] md:left-[8%] md:bottom-[40%] z-20">
+          <div className="relative z-20">
               <button 
                 onClick={() => { setFailedAt(null); setShowFailureScreen(false); }}
-                className="bg-destructive hover:bg-red-500 text-white font-display text-3xl md:text-5xl px-12 py-6 rounded-2xl border-[6px] border-black shadow-[12px_12px_0_0_rgba(0,0,0,1)] transition-transform hover:-translate-y-4 hover:shadow-[16px_16px_0_0_rgba(0,0,0,1)] active:translate-y-2 active:shadow-none"
+                className="bg-destructive hover:bg-red-500 text-white font-display text-3xl md:text-5xl px-12 py-4 md:py-6 rounded-2xl border-[4px] md:border-[6px] border-black shadow-[8px_8px_0_0_rgba(0,0,0,1)] transition-transform hover:-translate-y-2 hover:shadow-[12px_12px_0_0_rgba(0,0,0,1)] active:translate-y-2 active:shadow-none"
               >
                 Re-Catch
               </button>
