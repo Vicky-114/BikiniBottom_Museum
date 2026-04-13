@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
-import { Menu } from "lucide-react";
+import homeIcon from "@/assets/home.png";
+import menuIcon from "@/assets/menu.png";
 import { useTranslation } from "react-i18next";
 import LanguageSelector from "@/components/LanguageSelector";
 import homeCover from "@/assets/home-cover.webp";
@@ -180,8 +181,9 @@ const Index = () => {
                       setActiveSection("home");
                       setIsMenuOpen(false);
                     }}
-                    className="px-4 md:px-6 py-2 rounded-full border-2 border-[#002f5a] font-display text-xs md:text-sm text-foreground/75 bg-white hover:bg-white/90 transition-colors shadow-sm whitespace-nowrap"
+                    className="flex items-center justify-center gap-2 px-4 md:px-6 py-2 rounded-full border-2 border-[#002f5a] font-display text-xs md:text-sm text-foreground/75 bg-white hover:bg-white/90 transition-colors shadow-sm whitespace-nowrap"
                   >
+                    <img src={homeIcon} alt="Home" className="w-[18px] h-[18px] object-contain" />
                     {t('nav.home')}
                   </button>
                   <div className="relative inline-block">
@@ -189,7 +191,7 @@ const Index = () => {
                       onClick={() => setIsMenuOpen(!isMenuOpen)}
                       className="flex items-center justify-center gap-2 px-4 md:px-6 py-2 rounded-full border-2 border-[#002f5a] font-display text-xs md:text-sm text-foreground/75 bg-white hover:bg-white/90 transition-colors shadow-sm min-w-[80px] md:min-w-[100px]"
                     >
-                      <Menu className="w-4 h-4" />
+                      <img src={menuIcon} alt="Menu" className="w-[18px] h-[18px] object-contain" />
                       {t('nav.menu')}
                     </button>
                   {isMenuOpen && (

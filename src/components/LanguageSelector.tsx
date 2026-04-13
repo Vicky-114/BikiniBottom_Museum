@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import { Globe } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
+import languageIcon from '@/assets/language.png';
 
 const languages = [
     { code: 'en', label: 'English' },
@@ -41,7 +41,7 @@ const LanguageSelector = () => {
                 className="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/70 hover:bg-white/90 text-ocean-deep font-display text-sm transition-all shadow-sm border-2 border-primary"
                 aria-label="Select Language"
             >
-                <Globe className="w-4 h-4" />
+                <img src={languageIcon} alt="Language" className="w-[18px] h-[18px] object-contain" />
                 <span className="hidden sm:inline-block">Language</span>
             </button>
 
