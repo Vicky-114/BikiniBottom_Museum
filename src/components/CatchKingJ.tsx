@@ -282,7 +282,7 @@ export default function CatchKingJ({ onCatch }: { onCatch: () => void }) {
           <div className="relative z-20 mb-8 md:mb-12">
               <button 
                 onClick={() => { setFailedAt(null); setShowFailureScreen(false); }}
-                className="bg-destructive hover:bg-red-500 text-white font-display text-3xl md:text-5xl px-12 py-4 md:py-6 rounded-2xl border-[4px] md:border-[6px] border-black shadow-[8px_8px_0_0_rgba(0,0,0,1)] transition-transform hover:-translate-y-2 hover:shadow-[12px_12px_0_0_rgba(0,0,0,1)] active:translate-y-2 active:shadow-none"
+                className="relative bg-destructive hover:bg-red-500 text-white font-display text-3xl md:text-5xl px-12 py-4 md:py-6 rounded-2xl border-[4px] md:border-[6px] border-black shadow-[8px_8px_0_0_rgba(0,0,0,1)] transition-transform hover:-translate-y-2 hover:shadow-[12px_12px_0_0_rgba(0,0,0,1)] active:translate-y-2 active:shadow-none after:absolute after:-inset-[150px] after:content-['']"
               >
                 Re-Catch
               </button>
