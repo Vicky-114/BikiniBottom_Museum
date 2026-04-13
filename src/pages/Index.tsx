@@ -33,10 +33,10 @@ const Index = () => {
 
   const floatingPos = useMemo(() => {
     return navItems.map((_, i) => ({
-      // Stagger vertically: evens top (15%), odds bottom (28%)
-      top: `${15 + (i % 2 === 0 ? 0 : 13) + Math.random() * 5}%`, 
-      // Stagger horizontally: 5%, 17%, 29%, 41%, 53% to prevent early collisions
-      left: `${5 + (i * 12) + Math.random() * 5}%`, 
+      // Stagger vertically: evens top (30%), odds bottom (45%) to stay entirely beneath the text baseline
+      top: `${30 + (i % 2 === 0 ? 0 : 15) + Math.random() * 3}%`, 
+      // Stagger horizontally: 18% -> 66% to provide buffer margins for CSS sway and image width without crossing text bounds
+      left: `${18 + (i * 12) + Math.random() * 3}%`, 
       delay: (Math.random() * 10) * -1,
       duration: 22 + Math.random() * 12
     }));
@@ -152,7 +152,7 @@ const Index = () => {
                   >
                     <button
                       onClick={() => setActiveSection(item.id)}
-                      className="group relative transition-all duration-300 hover:scale-[1.15] hover:rotate-2 active:scale-95 cursor-none focus:outline-none w-[90px] sm:w-[130px] md:w-[175px] lg:w-[240px] h-auto drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] hover:drop-shadow-[0_8px_8px_rgba(0,0,0,0.7)]"
+                      className="group relative transition-all duration-300 hover:scale-[1.15] hover:rotate-2 active:scale-95 cursor-none focus:outline-none w-[45px] sm:w-[65px] md:w-[88px] lg:w-[120px] h-auto drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] hover:drop-shadow-[0_8px_8px_rgba(0,0,0,0.7)]"
                     >
                       <img 
                         src={item.image} 
