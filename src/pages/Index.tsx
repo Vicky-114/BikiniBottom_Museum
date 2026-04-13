@@ -152,7 +152,7 @@ const Index = () => {
                   >
                     <button
                       onClick={() => setActiveSection(item.id)}
-                      className="group relative transition-all duration-300 hover:scale-[1.15] hover:rotate-2 active:scale-95 cursor-none focus:outline-none w-[45px] sm:w-[65px] md:w-[88px] lg:w-[120px] h-auto drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] hover:drop-shadow-[0_8px_8px_rgba(0,0,0,0.7)]"
+                      className="group relative transition-all duration-300 hover:scale-[1.15] hover:rotate-2 active:scale-95 cursor-none focus:outline-none w-[90px] sm:w-[130px] md:w-[175px] lg:w-[240px] h-auto drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] hover:drop-shadow-[0_8px_8px_rgba(0,0,0,0.7)]"
                     >
                       <img 
                         src={item.image} 
