@@ -112,9 +112,11 @@ const Index = () => {
         {activeSection !== 'intro' && (
           <div className="-mt-8 md:-mt-12 lg:-mt-16">
             <header className={`w-full pt-4 pb-4 px-4 relative z-10 flex flex-col items-center justify-center gap-1 ${isHome ? 'min-h-[40vh] md:min-h-[35vh]' : 'mt-4'}`}>
-              <div className="absolute top-[21vh] sm:top-[16vh] md:top-[13vh] lg:top-[15vh] right-4 md:right-12 z-50">
-              <LanguageSelector />
-            </div>
+              {isHome && (
+                <div className="absolute top-[21vh] sm:top-[16vh] md:top-[13vh] lg:top-[15vh] right-4 md:right-12 z-50">
+                  <LanguageSelector />
+                </div>
+              )}
             <img src={logoImage} alt="Pattern Logo" className="w-16 h-16 md:w-20 md:h-20 object-contain drop-shadow-md animate-bubble" />
             <h1 className="font-display leading-tight text-center tracking-wide text-[#002f5a] [-webkit-text-stroke:1px_rgba(0,255,255,0.9)] md:[-webkit-text-stroke:1.5px_rgba(0,255,255,0.9)] drop-shadow-[0_0_8px_rgba(0,255,255,0.6)] md:drop-shadow-[0_0_12px_rgba(0,255,255,0.8)]">
               {isHome ? (
@@ -133,12 +135,12 @@ const Index = () => {
         </div>
         )}
 
-        {/* Toolbar row: Menu left, Log in right */}
+        {/* Toolbar row: Menu and Language placement */}
         {activeSection !== 'intro' && (
-          <div className="w-full px-4 md:px-12 pb-2 relative z-50 mt-4 md:mt-0">
+          <div className="w-full px-4 md:px-12 pb-2 relative z-[80] mt-4 md:mt-2 flex items-start justify-between">
             {isHome ? (
               /* Navigation menu: Scattered randomly across the screen */
-              <div className="fixed inset-0 pointer-events-none z-20">
+              <div className="relative w-[100%] h-[75vh] mx-auto pointer-events-none mt-[-5vh]">
                 {navItems.map((item, index) => (
                   <div
                     key={item.id}
@@ -169,25 +171,27 @@ const Index = () => {
                 ))}
               </div>
             ) : (
-              /* Dropdown menu for inner pages */
-              <div className="relative inline-block mt-8 md:mt-2 z-50 ml-2 md:ml-12">
-                <button
-                  onClick={() => {
-                    setActiveSection("home");
-                    setIsMenuOpen(false);
-                  }}
-                  className="absolute bottom-full mb-3 left-0 px-4 md:px-6 py-2 rounded-full border-2 border-primary font-display text-xs md:text-sm text-foreground/75 bg-white/70 hover:bg-white/90 transition-colors shadow-sm whitespace-nowrap"
-                >
-                  {t('nav.home')}
-                </button>
-                <div className="relative inline-block">
+              /* Dropdown menu for inner pages - Completely horizontal parallel flex rendering alongside LanguageSelector */
+              <div className="w-full flex justify-between items-center z-[100] mt-4 ml-0 md:ml-4 scale-[1.2] origin-top-left">
+                {/* Left Side: Menu + Home Group */}
+                <div className="flex items-center gap-4">
                   <button
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    className="flex items-center justify-center gap-2 px-4 md:px-6 py-2 rounded-full border-2 border-primary font-display text-xs md:text-sm text-foreground/75 bg-white/70 hover:bg-white/90 transition-colors shadow-sm min-w-[80px] md:min-w-[100px]"
+                    onClick={() => {
+                      setActiveSection("home");
+                      setIsMenuOpen(false);
+                    }}
+                    className="px-4 md:px-6 py-2 rounded-full border-2 border-[#002f5a] font-display text-xs md:text-sm text-foreground/75 bg-white hover:bg-white/90 transition-colors shadow-sm whitespace-nowrap"
                   >
-                    <Menu className="w-4 h-4" />
-                    {t('nav.menu')}
+                    {t('nav.home')}
                   </button>
+                  <div className="relative inline-block">
+                    <button
+                      onClick={() => setIsMenuOpen(!isMenuOpen)}
+                      className="flex items-center justify-center gap-2 px-4 md:px-6 py-2 rounded-full border-2 border-[#002f5a] font-display text-xs md:text-sm text-foreground/75 bg-white hover:bg-white/90 transition-colors shadow-sm min-w-[80px] md:min-w-[100px]"
+                    >
+                      <Menu className="w-4 h-4" />
+                      {t('nav.menu')}
+                    </button>
                   {isMenuOpen && (
                     <div className="absolute mt-2 left-0 w-48 md:w-56 border-2 border-primary rounded-xl bg-white/70 backdrop-blur-md shadow-lg overflow-visible">
                       <nav className="flex flex-col">
@@ -198,9 +202,9 @@ const Index = () => {
                                 setActiveSection(item.id);
                                 setIsMenuOpen(false);
                               }}
-                              className={`w-full px-4 py-3 text-left font-display text-sm transition-colors border-b last:border-b-0 border-primary/20 hover:bg-primary/10 text-foreground ${activeSection === item.id ? "bg-primary/20 font-bold" : ""
-                                }`}
+                              className={`w-full px-4 py-3 font-display flex items-center gap-3 text-sm transition-colors border-b last:border-b-0 border-primary/20 hover:bg-primary/10 text-[#002f5a] ${activeSection === item.id ? "bg-primary/20 font-bold" : ""}`}
                             >
+                              <img src={item.image} alt={item.id} className="w-5 h-5 object-contain" />
                               {item.shortLabel}
                             </button>
                             {/* Tooltip visible on hover */}
@@ -214,6 +218,12 @@ const Index = () => {
                     </div>
                   )}
                 </div>
+               </div>
+               
+               {/* Right Side: Language Block scaled parallel */}
+               <div className="origin-top-right">
+                  <LanguageSelector />
+               </div>
               </div>
             )}
           </div>

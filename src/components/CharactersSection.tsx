@@ -11,17 +11,29 @@ const CharactersSection = () => {
   const characters = [
     {
             name: "SpongeBob SquarePants",
+      symbolism: "Emotional Labor / Optimized Worker Identity",
+      symbolismDesc: "Constant enthusiasm and happiness mask repetitive labor and system compliance.",
       mainColor: "Bright Yellow",
       shape: "Rectangular Block",
       designAnalysis: "Stephen Hillenburg chose yellow because it signifies pure joy, optimism, and boundless energy. His rigid, non-organic rectangular shape sharply contrasts with the fluid, organic sea biology around him, underscoring his artificial nature as a modern kitchen sponge.",
       realAnimal: "Sea Sponge",
       personality: "Optimistic, energetic, naive, and incredibly loyal. As a pristine fry cook at the Krusty Krab, he embodies pure innocence. Biologically, real sea sponges are stationary filter feeders without brains, but creator Stephen Hillenburg deliberately drew him as a rectangular synthetic kitchen sponge for comedic effect.",
       relationships: [
-        { name: "Patrick Star", desc: "Best friend since childhood, they frequently catch jellyfish, blow bubbles, and go on bizarre adventures together." },
-        { name: "Squidward Tentacles", desc: "Next-door neighbor and Krusty Krab coworker. SpongeBob views him as a great friend, completely oblivious to Squidward's intense disdain." },
-        { name: "Mr. Krabs", desc: "Boss and ultimate idol. SpongeBob is fiercely loyal to him and the Krusty Krab." },
-        { name: "Sandy Cheeks", desc: "Close friend and regular Karate sparring partner." },
-        { name: "Gary the Snail", desc: "Beloved pet and surprisingly intelligent companion." },
+        { name: "Patrick Star",
+      symbolism: "Anti-Intellectualism / Absurd Freedom",
+      symbolismDesc: "His “stupidity” reflects a refusal of societal pressure and a form of freedom from structure.", desc: "Best friend since childhood, they frequently catch jellyfish, blow bubbles, and go on bizarre adventures together." },
+        { name: "Squidward Tentacles",
+      symbolism: "Alienation / Creative Frustration",
+      symbolismDesc: "Trapped between artistic desire and meaningless labor, embodying modern burnout.", desc: "Next-door neighbor and Krusty Krab coworker. SpongeBob views him as a great friend, completely oblivious to Squidward's intense disdain." },
+        { name: "Mr. Krabs",
+      symbolism: "Capitalism / Profit-Driven Exploitation",
+      symbolismDesc: "Obsessive pursuit of money prioritizes profit over ethics, reflecting capitalist logic.", desc: "Boss and ultimate idol. SpongeBob is fiercely loyal to him and the Krusty Krab." },
+        { name: "Sandy Cheeks",
+      symbolism: "Scientific Rationality / Individualism",
+      symbolismDesc: "Embodies logic, discipline, and self-sufficiency within a chaotic world.", desc: "Close friend and regular Karate sparring partner." },
+        { name: "Gary the Snail",
+      symbolism: "Silent Wisdom / Detached Observation",
+      symbolismDesc: "Observes without reacting, suggesting an alternative to emotional over-engagement.", desc: "Beloved pet and surprisingly intelligent companion." },
         { name: "Mermaid Man", desc: "SpongeBob's ultimate superhero idol." },
         { name: "Squidward's Father", desc: "SpongeBob surprisingly gets along beautifully with Squidward's dad and they love to play games together." }
       ],
@@ -67,7 +79,9 @@ const CharactersSection = () => {
       personality: "Penny-pinching, extremely greedy, yet a caring single father to a teenage sperm whale. He runs the Krusty Krab and ruthlessly guards the Krabby Patty secret formula. Like real crabs, he has a tough exterior shell and powerful pincers.",
       relationships: [
         { name: "SpongeBob SquarePants", desc: "His most profitable and gullible employee." },
-        { name: "Plankton", desc: "Former childhood best friend turned bitter business rival." },
+        { name: "Plankton",
+      symbolism: "Ambition / Technological Obsession",
+      symbolismDesc: "Driven by success and control, often detached from ethical consequences.", desc: "Former childhood best friend turned bitter business rival." },
         { name: "Pearl Krabs", desc: "His teenage whale daughter, whom he frequently embarrasses with his cheapness." }
       ],
       image: "https://media.tenor.com/HWqP72GJvCUAAAAC/mr-krabs-money.gif",
@@ -815,6 +829,27 @@ const CharactersSection = () => {
                       <p className="font-body text-foreground leading-relaxed text-sm md:text-base">
                         {/* @ts-ignore */}
                         {(selectedChar as any).designAnalysis}
+                      </p>
+                    </div>
+                  </div>
+                )}
+
+                {/* @ts-ignore */}
+                {(selectedChar as any).symbolism && (
+                  <div className="mb-8">
+                    <h4 className="font-display text-xl text-[#002f5a] mb-2 flex items-center gap-2">
+                       <span className="text-xl">👁️</span> Philosophical Representation
+                    </h4>
+                    <div className="bg-gradient-to-br from-[#f0f9ff]/80 to-[#e0f2fe]/50 backdrop-blur-md rounded-2xl p-5 md:p-6 border-l-4 border-[#ffb347] shadow-sm hover:shadow-md transition-all">
+                      <div className="mb-4">
+                        {/* @ts-ignore */}
+                        <div className="inline-block font-display text-sm md:text-base font-bold text-[#004b87] bg-white border border-[#bae6fd] px-4 py-2 rounded-xl shadow-sm tracking-wide whitespace-normal">
+                           Represents: {(selectedChar as any).symbolism}
+                        </div>
+                      </div>
+                      <p className="font-body text-[#1e293b] leading-relaxed text-sm md:text-base border-l-2 border-[#ffb347]/40 pl-3 italic">
+                        {/* @ts-ignore */}
+                        "{(selectedChar as any).symbolismDesc}"
                       </p>
                     </div>
                   </div>

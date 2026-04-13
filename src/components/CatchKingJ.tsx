@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import jellyfishFields from "@/assets/jellyfish_fields.jpg";
+import failureBg from "@/assets/failure_bg.jpg";
 import kingJ from "@/assets/KingJ.gif";
 import jelly2 from "@/assets/jelly2.png";
 import jelly4 from "@/assets/jelly4.png";
@@ -74,7 +75,7 @@ function Jellyfish({
 
   return (
     <div 
-      className={`absolute select-none overflow-visible ${isKing ? "group cursor-none" : "pointer-events-none"}`}
+      className={`absolute select-none overflow-visible group cursor-none`}
       style={{ left: 0, top: 0, zIndex }}
     >
       <div 
@@ -134,7 +135,7 @@ function BubbleTransition() {
       {bubbles.map((b) => (
         <div 
           key={b.id}
-          className="absolute bubble-sprite"
+          className="absolute bg-white/40 border-[4px] md:border-[8px] border-cyan-200 rounded-full shadow-[10px_10px_0_rgba(0,0,0,0.1),_inset_0_-10px_15px_rgba(0,200,255,0.6)] backdrop-blur-sm"
           style={{
             left: `${b.x}vw`,
             bottom: `-25vh`, // start below the screen
@@ -158,6 +159,8 @@ export default function CatchKingJ({ onCatch }: { onCatch: () => void }) {
 
   // Catch transition state
   const [caughtAt, setCaughtAt] = useState<{ x: number, y: number } | null>(null);
+  const [failedAt, setFailedAt] = useState<{ x: number, y: number } | null>(null);
+  const [showFailureScreen, setShowFailureScreen] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -177,7 +180,7 @@ export default function CatchKingJ({ onCatch }: { onCatch: () => void }) {
 
   const handleCatch = (e: React.MouseEvent) => {
     e.stopPropagation();
-    if (caughtAt) return; // Prevent double trigger
+    if (caughtAt || failedAt || showFailureScreen) return; // Prevent double trigger
 
     setCaughtAt({ x: e.clientX, y: e.clientY });
 
@@ -185,6 +188,17 @@ export default function CatchKingJ({ onCatch }: { onCatch: () => void }) {
     setTimeout(() => {
       onCatch();
     }, 1400); // Increased duration to let 70 bubbles fully pop in
+  };
+
+  const handleWrongCatch = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (caughtAt || failedAt || showFailureScreen) return;
+    
+    setFailedAt({ x: e.clientX, y: e.clientY });
+    
+    setTimeout(() => {
+      setShowFailureScreen(true);
+    }, 800); // Wait for explosion animation to finish propagating
   };
 
   return (
@@ -200,21 +214,26 @@ export default function CatchKingJ({ onCatch }: { onCatch: () => void }) {
           0%, 100% { transform: translateY(0); }
           50% { transform: translateY(-30px); }
         }
+        @keyframes explosion {
+          0% { transform: translate(-50%, -50%) scale(0); opacity: 1; }
+          40% { background-color: #ffaa00; opacity: 1; }
+          100% { transform: translate(-50%, -50%) scale(100); opacity: 0; background-color: #ff0000; }
+        }
       `}</style>
 
       {/* Decorative GIF Jellyfish floating organically around screen */}
-      <Jellyfish src={jellyGif1} sizeClass="w-24 h-24 md:w-32 md:h-32" zIndex={10} />
-      <Jellyfish src={jellyGif1} sizeClass="w-20 h-20 md:w-28 md:h-28" zIndex={11} />
-      <Jellyfish src={jellyGif2} sizeClass="w-20 h-20 md:w-28 md:h-28" zIndex={12} />
-      <Jellyfish src={jellyGif2} sizeClass="w-16 h-16 md:w-24 md:h-24" zIndex={13} />
-      <Jellyfish src={jellyGif3} sizeClass="w-28 h-28 md:w-36 md:h-36" zIndex={14} />
-      <Jellyfish src={jellyGif3} sizeClass="w-24 h-24 md:w-32 md:h-32" zIndex={15} />
-      <Jellyfish src={jellyGif4} sizeClass="w-32 h-32 md:w-40 md:h-40" zIndex={16} />
-      <Jellyfish src={jellyGif4} sizeClass="w-28 h-28 md:w-36 md:h-36" zIndex={17} />
-      <Jellyfish src={jellyGif5} sizeClass="w-24 h-24 md:w-36 md:h-36" zIndex={18} />
-      <Jellyfish src={jellyGif5} sizeClass="w-20 h-20 md:w-28 md:h-28" zIndex={19} />
-      <Jellyfish src={jellyGif6} sizeClass="w-36 h-36 md:w-48 md:h-48" zIndex={20} />
-      <Jellyfish src={jellyGif6} sizeClass="w-32 h-32 md:w-40 md:h-40" zIndex={21} />
+      <Jellyfish src={jellyGif1} sizeClass="w-24 h-24 md:w-32 md:h-32" zIndex={10} onClick={handleWrongCatch} />
+      <Jellyfish src={jellyGif1} sizeClass="w-20 h-20 md:w-28 md:h-28" zIndex={11} onClick={handleWrongCatch} />
+      <Jellyfish src={jellyGif2} sizeClass="w-20 h-20 md:w-28 md:h-28" zIndex={12} onClick={handleWrongCatch} />
+      <Jellyfish src={jellyGif2} sizeClass="w-16 h-16 md:w-24 md:h-24" zIndex={13} onClick={handleWrongCatch} />
+      <Jellyfish src={jellyGif3} sizeClass="w-28 h-28 md:w-36 md:h-36" zIndex={14} onClick={handleWrongCatch} />
+      <Jellyfish src={jellyGif3} sizeClass="w-24 h-24 md:w-32 md:h-32" zIndex={15} onClick={handleWrongCatch} />
+      <Jellyfish src={jellyGif4} sizeClass="w-32 h-32 md:w-40 md:h-40" zIndex={16} onClick={handleWrongCatch} />
+      <Jellyfish src={jellyGif4} sizeClass="w-28 h-28 md:w-36 md:h-36" zIndex={17} onClick={handleWrongCatch} />
+      <Jellyfish src={jellyGif5} sizeClass="w-24 h-24 md:w-36 md:h-36" zIndex={18} onClick={handleWrongCatch} />
+      <Jellyfish src={jellyGif5} sizeClass="w-20 h-20 md:w-28 md:h-28" zIndex={19} onClick={handleWrongCatch} />
+      <Jellyfish src={jellyGif6} sizeClass="w-36 h-36 md:w-48 md:h-48" zIndex={20} onClick={handleWrongCatch} />
+      <Jellyfish src={jellyGif6} sizeClass="w-32 h-32 md:w-40 md:h-40" zIndex={21} onClick={handleWrongCatch} />
 
       
       {/* King J Sprite */}
@@ -231,6 +250,45 @@ export default function CatchKingJ({ onCatch }: { onCatch: () => void }) {
       {/* Bubble Transition Mask */}
       {caughtAt && (
         <BubbleTransition />
+      )}
+      
+      {/* Explosion Mask */}
+      {failedAt && !showFailureScreen && (
+        <div className="fixed inset-0 z-[200] pointer-events-none flex items-center justify-center">
+            <div 
+              className="w-12 h-12 bg-[#ff5500] rounded-full shadow-[0_0_150px_100px_rgba(255,50,0,1)]"
+              style={{
+                position: 'fixed',
+                left: failedAt.x,
+                top: failedAt.y,
+                transform: 'translate(-50%, -50%)',
+                animation: 'explosion 0.8s cubic-bezier(0.1, 0.9, 0.2, 1) forwards'
+              }}
+            />
+        </div>
+      )}
+
+      {/* Failure Overlay Screen */}
+      {showFailureScreen && (
+        <div className="fixed inset-0 z-[300] bg-black flex items-center justify-center cursor-default animate-in fade-in duration-500">
+          <img src={failureBg} className="absolute inset-0 w-full h-full object-cover opacity-80" alt="Failure" />
+          <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
+          
+          <div className="relative z-10 flex flex-col items-center">
+             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display text-white drop-shadow-[0_4px_10px_rgba(0,0,0,1)] border-4 border-black bg-primary/95 px-10 py-6 rounded-3xl -rotate-2 transform hover:rotate-1 animate-breathe">
+               Catch Jelly King to enter the Museum
+             </h1>
+          </div>
+          
+          <div className="absolute left-[3%] bottom-[30%] md:left-[8%] md:bottom-[40%] z-20">
+              <button 
+                onClick={() => { setFailedAt(null); setShowFailureScreen(false); }}
+                className="bg-destructive hover:bg-red-500 text-white font-display text-3xl md:text-5xl px-12 py-6 rounded-2xl border-[6px] border-black shadow-[12px_12px_0_0_rgba(0,0,0,1)] transition-transform hover:-translate-y-4 hover:shadow-[16px_16px_0_0_rgba(0,0,0,1)] active:translate-y-2 active:shadow-none"
+              >
+                Re-Catch
+              </button>
+          </div>
+        </div>
       )}
 
       {/* Animated Net Cursor */}
