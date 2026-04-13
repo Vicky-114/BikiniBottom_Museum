@@ -172,9 +172,9 @@ const Index = () => {
               </div>
             ) : (
               /* Dropdown menu for inner pages - Completely horizontal parallel flex rendering alongside LanguageSelector */
-              <div className="w-full flex justify-between items-center z-[100] mt-4 ml-0 md:ml-4 scale-[1.2] origin-top-left">
-                {/* Left Side: Menu + Home Group */}
-                <div className="flex items-center gap-4">
+              <div className="w-full flex justify-between items-start z-[100] mt-4 ml-0 md:ml-4 overflow-visible">
+                {/* Left Side: Home on top, Menu below */}
+                <div className="flex flex-col items-start gap-4 scale-[1.2] origin-top-left relative z-50">
                   <button
                     onClick={() => {
                       setActiveSection("home");
@@ -221,7 +221,7 @@ const Index = () => {
                </div>
                
                {/* Right Side: Language Block scaled parallel */}
-               <div className="origin-top-right">
+               <div className="relative z-50 scale-[1.2] origin-top-right mr-4 md:mr-8">
                   <LanguageSelector />
                </div>
               </div>
