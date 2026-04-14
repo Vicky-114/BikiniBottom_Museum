@@ -264,8 +264,8 @@ export default function CatchKingJ({ onCatch }: { onCatch: () => void }) {
           <div 
             className="absolute animate-explode-emoji z-[150]"
             style={{
-              left: `${failedAt.x}px`,
-              top: `${failedAt.y}px`,
+              left: '50%',
+              top: '50%',
               transform: 'translate(-50%, -50%)'
             }}
           >
@@ -308,7 +308,7 @@ export default function CatchKingJ({ onCatch }: { onCatch: () => void }) {
         <img 
           src={nets[netFrame]} 
           alt="net cursor" 
-          className="w-[400px] h-[400px] object-contain drop-shadow-lg"
+          className="w-[400px] h-[400px] object-contain drop-shadow-lg bg-transparent"
           style={{ transform: 'rotate(-15deg)' }}
         />
       </div>
