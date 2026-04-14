@@ -22,8 +22,8 @@ const GameSection = () => {
                 <div className="absolute inset-0 bg-black/20"></div>
             </div>
 
-            <section className="animate-fade-in-up w-full flex flex-col items-center justify-center pt-2 relative z-10 px-4 min-h-[80vh]">
-                <div className="rounded-3xl bg-white/50 p-6 md:p-10 border-2 border-primary/50 shadow-2xl text-center w-full max-w-5xl mx-auto backdrop-blur-md">
+            <section className="animate-fade-in-up w-full flex flex-col items-center justify-center pt-0 relative z-10 px-4 min-h-[80vh]">
+                <div className="w-full max-w-5xl mx-auto">
                     
                     {/* External Game Launcher Container */}
                     <div className="relative w-full aspect-video rounded-2xl overflow-hidden border-4 border-white shadow-2xl bg-black/10 transition-all duration-500 hover:shadow-primary/20">
