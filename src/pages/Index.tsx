@@ -33,11 +33,16 @@ const Index = () => {
   ];
 
   const floatingPos = useMemo(() => {
+    // Detect mobile: use smaller spread so icons don't fall off-screen on narrow viewports
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
     return navItems.map((_, i) => ({
-      // Stagger vertically: evens top (30%), odds bottom (45%) to stay entirely beneath the text baseline
-      top: `${30 + (i % 2 === 0 ? 0 : 15) + Math.random() * 3}%`, 
-      // Stagger horizontally: 18% -> 66% to provide buffer margins for CSS sway and image width without crossing text bounds
-      left: `${18 + (i * 12) + Math.random() * 3}%`, 
+      // On mobile: tighter vertical band; on desktop: original layout
+      top: isMobile
+        ? `${40 + (i % 2 === 0 ? 0 : 18) + Math.random() * 4}%`
+        : `${30 + (i % 2 === 0 ? 0 : 15) + Math.random() * 3}%`,
+      left: isMobile
+        ? `${10 + (i * 16) + Math.random() * 4}%`
+        : `${18 + (i * 12) + Math.random() * 3}%`,
       delay: (Math.random() * 10) * -1,
       duration: 22 + Math.random() * 12
     }));
@@ -114,7 +119,7 @@ const Index = () => {
           <div className="-mt-8 md:-mt-12 lg:-mt-16">
             <header className={`w-full pt-4 pb-4 px-4 relative z-10 flex flex-col items-center justify-center gap-1 ${isHome ? 'min-h-[40vh] md:min-h-[35vh]' : 'mt-4'}`}>
               {isHome && (
-                <div className="absolute top-[21vh] sm:top-[16vh] md:top-[13vh] lg:top-[15vh] right-4 md:right-12 z-50">
+                <div className="absolute top-3 right-3 sm:top-[21vh] sm:right-4 md:right-12 z-50">
                   <LanguageSelector />
                 </div>
               )}
@@ -122,12 +127,12 @@ const Index = () => {
             <h1 className="font-display leading-tight text-center tracking-wide text-[#002f5a] [-webkit-text-stroke:1px_rgba(0,255,255,0.9)] md:[-webkit-text-stroke:1.5px_rgba(0,255,255,0.9)] drop-shadow-[0_0_8px_rgba(0,255,255,0.6)] md:drop-shadow-[0_0_12px_rgba(0,255,255,0.8)]">
               {isHome ? (
                 <>
-                  <span className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl">{t('home.title_part1')}</span>
+                  <span className="text-xl sm:text-2xl md:text-5xl lg:text-6xl">{t('home.title_part1')}</span>
                   <br />
-                  <span className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl mt-2 md:mt-3 block tracking-wider md:tracking-widest">{t('home.title_part2')}</span>
+                  <span className="text-xl sm:text-2xl md:text-4xl lg:text-6xl mt-1 sm:mt-2 md:mt-3 block tracking-wider md:tracking-widest">{t('home.title_part2')}</span>
                 </>
               ) : (
-                <span className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl mt-2 md:mt-3 block tracking-wider md:tracking-widest whitespace-pre-line">
+                <span className="text-xl sm:text-2xl md:text-4xl lg:text-6xl mt-1 sm:mt-2 md:mt-3 block tracking-wider md:tracking-widest whitespace-pre-line">
                   {navItems.find(item => item.id === activeSection)?.label}
                 </span>
               )}
@@ -155,7 +160,7 @@ const Index = () => {
                   >
                     <button
                       onClick={() => setActiveSection(item.id)}
-                      className="group relative transition-all duration-300 hover:scale-[1.15] hover:rotate-2 active:scale-95 cursor-none focus:outline-none w-[45px] sm:w-[65px] md:w-[88px] lg:w-[120px] h-auto drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] hover:drop-shadow-[0_8px_8px_rgba(0,0,0,0.7)]"
+                      className="group relative transition-all duration-300 hover:scale-[1.15] hover:rotate-2 active:scale-95 cursor-none focus:outline-none w-[60px] sm:w-[70px] md:w-[88px] lg:w-[120px] h-auto drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] hover:drop-shadow-[0_8px_8px_rgba(0,0,0,0.7)]"
                     >
                       <img 
                         src={item.image} 
@@ -172,26 +177,26 @@ const Index = () => {
                 ))}
               </div>
             ) : (
-              /* Dropdown menu for inner pages - Completely horizontal parallel flex rendering alongside LanguageSelector */
-              <div className="w-full flex justify-between items-start z-[100] mt-4 ml-0 md:ml-4 overflow-visible">
-                {/* Left Side: Home on top, Menu below */}
-                <div className="flex flex-col items-start gap-4 scale-[1.2] origin-top-left relative z-50">
+              /* Dropdown menu for inner pages — compact horizontal row on all screen sizes */
+              <div className="w-full flex justify-between items-center z-[100] mt-2 ml-0 md:ml-4 overflow-visible">
+                {/* Left Side: Home + Menu in a horizontal row */}
+                <div className="flex flex-row items-center gap-2 relative z-50">
                   <button
                     onClick={() => {
                       setActiveSection("home");
                       setIsMenuOpen(false);
                     }}
-                    className="flex items-center justify-center gap-2 px-4 md:px-6 py-2 rounded-full border-2 border-[#002f5a] font-display text-xs md:text-sm text-foreground/75 bg-white hover:bg-white/90 transition-colors shadow-sm whitespace-nowrap"
+                    className="flex items-center justify-center gap-1 px-3 md:px-6 py-2 rounded-full border-2 border-[#002f5a] font-display text-xs md:text-sm text-foreground/75 bg-white hover:bg-white/90 transition-colors shadow-sm whitespace-nowrap"
                   >
-                    <img src={homeIcon} alt="Home" className="w-[18px] h-[18px] object-contain" />
+                    <img src={homeIcon} alt="Home" className="w-[16px] h-[16px] object-contain" />
                     {t('nav.home')}
                   </button>
                   <div className="relative inline-block">
                     <button
                       onClick={() => setIsMenuOpen(!isMenuOpen)}
-                      className="flex items-center justify-center gap-2 px-4 md:px-6 py-2 rounded-full border-2 border-[#002f5a] font-display text-xs md:text-sm text-foreground/75 bg-white hover:bg-white/90 transition-colors shadow-sm min-w-[80px] md:min-w-[100px]"
+                      className="flex items-center justify-center gap-1 px-3 md:px-6 py-2 rounded-full border-2 border-[#002f5a] font-display text-xs md:text-sm text-foreground/75 bg-white hover:bg-white/90 transition-colors shadow-sm min-w-[70px] md:min-w-[100px]"
                     >
-                      <img src={menuIcon} alt="Menu" className="w-[18px] h-[18px] object-contain" />
+                      <img src={menuIcon} alt="Menu" className="w-[16px] h-[16px] object-contain" />
                       {t('nav.menu')}
                     </button>
                   {isMenuOpen && (
@@ -224,8 +229,8 @@ const Index = () => {
                 </div>
                </div>
                
-               {/* Right Side: Language Block scaled parallel */}
-               <div className="relative z-50 scale-[1.2] origin-top-right mr-4 md:mr-8">
+               {/* Right Side: Language Block */}
+               <div className="relative z-50 mr-1 md:mr-8">
                   <LanguageSelector />
                </div>
               </div>
