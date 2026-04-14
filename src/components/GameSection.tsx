@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Play } from "lucide-react";
-import pageBg from "@/assets/game_bg.jpeg";
+import pageBg from "@/assets/game_bg_tentacle.png";
 import gameScreen from "@/assets/bg_bikini_bottom.jpg";
 
 const GameSection = () => {
