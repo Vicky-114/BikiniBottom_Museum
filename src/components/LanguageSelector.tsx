@@ -38,10 +38,10 @@ const LanguageSelector = () => {
         <div className="relative inline-block z-50 pointer-events-auto" ref={dropdownRef}>
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="flex items-center justify-center gap-1 px-3 md:px-6 py-2 rounded-full border-2 border-[#002f5a] font-display text-xs md:text-sm text-foreground/75 bg-white hover:bg-white/90 transition-colors shadow-sm whitespace-nowrap"
+                className="flex items-center justify-center gap-2 px-4 md:px-7 py-2.5 rounded-full border-2 border-[#002f5a] font-display text-sm md:text-base text-foreground/75 bg-white hover:bg-white/90 transition-colors shadow-sm whitespace-nowrap"
                 aria-label="Select Language"
             >
-                <img src={languageIcon} alt="Language" className="w-[26px] h-[26px] object-contain" />
+                <img src={languageIcon} alt="Language" className="w-[34px] h-[34px] object-contain" />
                 <span>Language</span>
             </button>
 

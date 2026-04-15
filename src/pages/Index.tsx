@@ -179,24 +179,24 @@ const Index = () => {
             ) : (
               /* Dropdown menu for inner pages — compact horizontal row on all screen sizes */
               <div className="w-full flex justify-between items-center z-[100] mt-2 ml-0 md:ml-4 overflow-visible">
-                {/* Left Side: Home + Menu in a horizontal row */}
-                <div className="flex flex-row items-center gap-2 relative z-50">
+                {/* Left Side: Home + Menu in a vertical column */}
+                <div className="flex flex-col items-start gap-2 relative z-50">
                   <button
                     onClick={() => {
                       setActiveSection("home");
                       setIsMenuOpen(false);
                     }}
-                    className="flex items-center justify-center gap-1 px-3 md:px-6 py-2 rounded-full border-2 border-[#002f5a] font-display text-xs md:text-sm text-foreground/75 bg-white hover:bg-white/90 transition-colors shadow-sm whitespace-nowrap"
+                    className="flex items-center justify-center gap-2 px-4 md:px-7 py-2.5 rounded-full border-2 border-[#002f5a] font-display text-sm md:text-base text-foreground/75 bg-white hover:bg-white/90 transition-colors shadow-sm whitespace-nowrap"
                   >
-                    <img src={homeIcon} alt="Home" className="w-[26px] h-[26px] object-contain" />
+                    <img src={homeIcon} alt="Home" className="w-[34px] h-[34px] object-contain" />
                     {t('nav.home')}
                   </button>
                   <div className="relative inline-block">
                     <button
                       onClick={() => setIsMenuOpen(!isMenuOpen)}
-                      className="flex items-center justify-center gap-1 px-3 md:px-6 py-2 rounded-full border-2 border-[#002f5a] font-display text-xs md:text-sm text-foreground/75 bg-white hover:bg-white/90 transition-colors shadow-sm min-w-[70px] md:min-w-[100px]"
+                      className="flex items-center justify-center gap-2 px-4 md:px-7 py-2.5 rounded-full border-2 border-[#002f5a] font-display text-sm md:text-base text-foreground/75 bg-white hover:bg-white/90 transition-colors shadow-sm min-w-[90px] md:min-w-[120px]"
                     >
-                        <img src={menuIcon} alt="Menu" className="w-[26px] h-[26px] object-contain" />
+                        <img src={menuIcon} alt="Menu" className="w-[34px] h-[34px] object-contain" />
                       {t('nav.menu')}
                     </button>
                   {isMenuOpen && (
