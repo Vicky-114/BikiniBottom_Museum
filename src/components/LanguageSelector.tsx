@@ -41,7 +41,7 @@ const LanguageSelector = () => {
                 className="flex items-center justify-center gap-2 px-4 md:px-7 py-2.5 rounded-full border-2 border-[#002f5a] font-display text-sm md:text-base text-foreground/75 bg-white hover:bg-white/90 transition-colors shadow-sm whitespace-nowrap"
                 aria-label="Select Language"
             >
-                <img src={languageIcon} alt="Language" className="w-[34px] h-[34px] object-contain" />
+                <img src={languageIcon} alt="Language" className="w-[43px] h-[43px] object-contain" />
                 <span>Language</span>
             </button>
 
