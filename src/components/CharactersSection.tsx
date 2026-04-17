@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import charactersBg from "@/assets/new-characters-bg.jpg";
 import CharacterNetwork from "./CharacterNetwork";
+import CharacterAvatar, { buildCharacterFallbackDataUri } from "./CharacterAvatar";
 
 const CharactersSection = () => {
   const { t } = useTranslation();
@@ -37,7 +38,7 @@ const CharactersSection = () => {
         { name: "Mermaid Man", desc: "SpongeBob's ultimate superhero idol." },
         { name: "Squidward's Father", desc: "SpongeBob surprisingly gets along beautifully with Squidward's dad and they love to play games together." }
       ],
-      image: "https://media.tenor.com/jM39-0F86WcAAAAi/spongebob-spongebob-squarepants.gif",
+      image: buildCharacterFallbackDataUri("SpongeBob SquarePants", "#fff59d", "#fde047", "#083b74"),
       color: "border-sponge-yellow",
     },
     {
@@ -135,7 +136,7 @@ const CharactersSection = () => {
       designAnalysis: "As a sperm whale, her massive, rectangular gray head with a flat top is profoundly disproportionate to the rest of the cast. The visual joke is her trying to exhibit delicate teenage cheerleader behavior while possessing the sheer weight and square geometry of an industrial vehicle.",
       realAnimal: "Sperm Whale",
       personality: "Mr. Krabs's teenage daughter who loves shopping and pop music. Biologically, she's a massive marine mammal, which humorously contrasts with her tiny crab father.",
-      image: "https://media.tenor.com/yFv6lR08yVMAAAAi/pearl-krabs.gif",
+      image: buildCharacterFallbackDataUri("Pearl Krabs", "#fce7f3", "#f9a8d4", "#7a1f4d"),
       color: "border-pink-400",
       symbolism: "Superficial Consumerism / Generational Disconnect",
       symbolismDesc: "Represents the intense materialistic drive instilled by her father's capitalism, yet fundamentally highlighting the tragic disconnect and pressures of adolescent social conformity.",
@@ -151,7 +152,7 @@ const CharactersSection = () => {
         { name: "SpongeBob SquarePants", desc: "Her eternal student who causes her severe psychological trauma and physical injuries." },
         { name: "Mr. Krabs", desc: "Occasionally dates him, though his cheapness often ruins the mood." }
       ],
-      image: "https://media.tenor.com/uRXXy1ZJqI0AAAAi/mrs-puff.gif",
+      image: buildCharacterFallbackDataUri("Mrs. Puff", "#fef3c7", "#fcd34d", "#7c4a03"),
       color: "border-yellow-300",
     },
     {
@@ -166,7 +167,7 @@ const CharactersSection = () => {
         { name: "Sandy Cheeks", desc: "Fellow fitness enthusiast and lifting partner." },
         { name: "Don the Whale", desc: "Fellow muscular beach regular and lifting competitor." }
       ],
-      image: "https://media.tenor.com/xHqNInZkSgcAAAAi/larry.gif",
+      image: buildCharacterFallbackDataUri("Larry the Lobster", "#fee2e2", "#f87171", "#7f1d1d"),
       color: "border-red-500",
     },
     {
@@ -180,7 +181,7 @@ const CharactersSection = () => {
         { name: "Plankton", desc: "Her husband and creator. She constantly deals with his inadequacies and failures." },
         { name: "Sandy Cheeks", desc: "Mutual respect as fellow women of science." }
       ],
-      image: "https://media.tenor.com/0M20k8eP8S4AAAAi/karen-plankton.gif",
+      image: buildCharacterFallbackDataUri("Karen Plankton", "#dcfce7", "#4ade80", "#14532d"),
       color: "border-green-400",
     },
     {
@@ -237,7 +238,7 @@ const CharactersSection = () => {
         { name: "Princess Mindy", desc: "His daughter who frequently questions his harsh dictatorial judgements." },
         { name: "SpongeBob SquarePants", desc: "Reclaimed his stolen crown from Shell City." }
       ],
-      image: "https://media.tenor.com/IksBlybQnqkAAAAi/king-neptune.gif",
+      image: buildCharacterFallbackDataUri("King Neptune", "#cffafe", "#67e8f9", "#0c4a6e"),
       color: "border-cyan-400",
     },
     {
@@ -887,7 +888,7 @@ const CharactersSection = () => {
             <div className={`rounded-2xl bg-white/80 p-6 md:p-8 border-2 shadow-lg ${selectedChar.color}`}>
               <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-6 text-center md:text-left">
                 {selectedChar.image ? (
-                  <img src={selectedChar.image} alt={selectedChar.name} className="w-24 h-24 md:w-32 md:h-32 object-contain drop-shadow-md" />
+                  <CharacterAvatar src={selectedChar.image} alt={selectedChar.name} className="w-24 h-24 md:w-32 md:h-32 object-contain drop-shadow-md" />
                 ) : (
                   <div className="w-24 h-24 md:w-32 md:h-32 bg-gray-200/50 rounded-full flex items-center justify-center text-4xl text-gray-400">?</div>
                 )}
@@ -978,7 +979,7 @@ const CharactersSection = () => {
                                 {relCharObj && (
                                   <div className={`w-12 h-12 shrink-0 rounded-full border-2 ${relCharObj.color} bg-white flex items-center justify-center p-0.5 shadow-sm group-hover:scale-110 transition-transform`}>
                                     {relCharObj.image ? (
-                                      <img src={relCharObj.image} alt={relCharObj.name} className="w-full h-full object-cover rounded-full" />
+                                      <CharacterAvatar src={relCharObj.image} alt={relCharObj.name} className="w-full h-full object-cover rounded-full" />
                                     ) : (
                                       <span className="text-sm font-bold text-gray-400">?</span>
                                     )}
@@ -1052,7 +1053,7 @@ const CharactersSection = () => {
                                     style={{ animationDelay: `${index * 0.15}s` }}
                                  >
                                     {rel.image ? (
-                                        <img src={rel.image} className="w-full h-full rounded-full object-cover" alt={rel.name} />
+                                        <CharacterAvatar src={rel.image} className="w-full h-full rounded-full object-cover" alt={rel.name} />
                                     ) : (
                                         <span className="w-full h-full flex items-center justify-center font-bold text-gray-400">?</span>
                                     )}
@@ -1071,7 +1072,7 @@ const CharactersSection = () => {
 
                     <div className={`w-24 h-24 sm:w-28 sm:h-28 rounded-full border-4 overflow-hidden shadow-lg ${char.color} bg-white flex items-center justify-center p-1 transition-all`}>
                       {char.image ? (
-                        <img src={char.image} alt={char.name} className="w-full h-full object-cover rounded-full" />
+                        <CharacterAvatar src={char.image} alt={char.name} className="w-full h-full object-cover rounded-full" />
                       ) : (
                         <span className="text-3xl font-bold text-gray-400">?</span>
                       )}

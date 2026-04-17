@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState, useMemo } from 'react';
 import * as d3 from 'd3-force';
+import CharacterAvatar from "./CharacterAvatar";
 
 export interface CharacterNode extends d3.SimulationNodeDatum {
   id: string;
@@ -267,7 +268,7 @@ const CharacterNetwork: React.FC<CharacterNetworkProps> = ({ characters, onSelec
               style={{ borderWidth: '3px' }}
             >
               {node.image ? (
-                 <img src={node.image} alt={node.name} className="w-full h-full object-cover rounded-full p-1" />
+                 <CharacterAvatar src={node.image} alt={node.name} className="w-full h-full object-cover rounded-full p-1" />
               ) : (
                  <span className="text-xl font-bold text-gray-400">?</span>
               )}
@@ -302,7 +303,7 @@ const CharacterNetwork: React.FC<CharacterNetworkProps> = ({ characters, onSelec
                   style={{ borderWidth: '3px' }}
                 >
                   {node.image ? (
-                    <img src={node.image} alt={node.name} className="w-full h-full object-cover rounded-full p-1" />
+                    <CharacterAvatar src={node.image} alt={node.name} className="w-full h-full object-cover rounded-full p-1" />
                   ) : (
                     <span className="text-xl font-bold text-gray-400">?</span>
                   )}
