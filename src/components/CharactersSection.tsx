@@ -4,6 +4,12 @@ import { useTranslation } from "react-i18next";
 import charactersBg from "@/assets/new-characters-bg.jpg";
 import CharacterNetwork from "./CharacterNetwork";
 import CharacterAvatar, { buildCharacterFallbackDataUri } from "./CharacterAvatar";
+import spongebobImg from "@/assets/spongebob.png";
+import pearlImg from "@/assets/pearl.png";
+import puffImg from "@/assets/puff.png";
+import larryImg from "@/assets/larry.png";
+import karenImg from "@/assets/karen.png";
+import neptuneImg from "@/assets/neptune.png";
 
 const CharactersSection = () => {
   const { t } = useTranslation();
@@ -38,7 +44,7 @@ const CharactersSection = () => {
         { name: "Mermaid Man", desc: "SpongeBob's ultimate superhero idol." },
         { name: "Squidward's Father", desc: "SpongeBob surprisingly gets along beautifully with Squidward's dad and they love to play games together." }
       ],
-      image: "https://media.tenor.com/-5vKzWf8j8kAAAAC/spongebob-squarepants-happy.gif",
+      image: spongebobImg,
       color: "border-sponge-yellow",
     },
     {
@@ -136,7 +142,7 @@ const CharactersSection = () => {
       designAnalysis: "As a sperm whale, her massive, rectangular gray head with a flat top is profoundly disproportionate to the rest of the cast. The visual joke is her trying to exhibit delicate teenage cheerleader behavior while possessing the sheer weight and square geometry of an industrial vehicle.",
       realAnimal: "Sperm Whale",
       personality: "Mr. Krabs's teenage daughter who loves shopping and pop music. Biologically, she's a massive marine mammal, which humorously contrasts with her tiny crab father.",
-      image: "https://media.tenor.com/yFv6lR08yVMAAAAC/pearl-krabs.gif",
+      image: pearlImg,
       color: "border-pink-400",
       symbolism: "Superficial Consumerism / Generational Disconnect",
       symbolismDesc: "Represents the intense materialistic drive instilled by her father's capitalism, yet fundamentally highlighting the tragic disconnect and pressures of adolescent social conformity.",
@@ -152,7 +158,7 @@ const CharactersSection = () => {
         { name: "SpongeBob SquarePants", desc: "Her eternal student who causes her severe psychological trauma and physical injuries." },
         { name: "Mr. Krabs", desc: "Occasionally dates him, though his cheapness often ruins the mood." }
       ],
-      image: "https://media.tenor.com/uRXXy1ZJqI0AAAAC/mrs-puff-spongebob.gif",
+      image: puffImg,
       color: "border-yellow-300",
     },
     {
@@ -167,7 +173,7 @@ const CharactersSection = () => {
         { name: "Sandy Cheeks", desc: "Fellow fitness enthusiast and lifting partner." },
         { name: "Don the Whale", desc: "Fellow muscular beach regular and lifting competitor." }
       ],
-      image: "https://media.tenor.com/xHqNInZkSgcAAAAC/larry-the-lobster-spongebob.gif",
+      image: larryImg,
       color: "border-red-500",
     },
     {
@@ -181,7 +187,7 @@ const CharactersSection = () => {
         { name: "Plankton", desc: "Her husband and creator. She constantly deals with his inadequacies and failures." },
         { name: "Sandy Cheeks", desc: "Mutual respect as fellow women of science." }
       ],
-      image: "https://media.tenor.com/0M20k8eP8S4AAAAC/karen-plankton-spongebob.gif",
+      image: karenImg,
       color: "border-green-400",
     },
     {
@@ -238,7 +244,7 @@ const CharactersSection = () => {
         { name: "Princess Mindy", desc: "His daughter who frequently questions his harsh dictatorial judgements." },
         { name: "SpongeBob SquarePants", desc: "Reclaimed his stolen crown from Shell City." }
       ],
-      image: "https://media.tenor.com/IksBlybQnqkAAAAC/king-neptune-spongebob.gif",
+      image: neptuneImg,
       color: "border-cyan-400",
     },
     {
